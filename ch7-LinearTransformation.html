@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: salem                          *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Linear Transformations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends decimal; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-2 { system: extends decimal; prefix: '('; suffix: ') '; }
+@counter-style ptx-marker-3 { system: extends lower-alpha; prefix: '('; suffix: ') '; }
+@counter-style ptx-marker-4 { system: extends decimal; prefix: ''; suffix: '.  '; }
+@counter-style ptx-marker-5 { system: extends decimal; prefix: 'Step '; suffix: ': '; }
+@counter-style ptx-marker-6 { system: extends lower-roman; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-7 { system: extends decimal; prefix: 'Step '; suffix: '. '; }
+@counter-style ptx-marker-8 { system: extends decimal; prefix: 'Type '; suffix: ' '; }
+@counter-style ptx-marker-9 { system: extends lower-alpha; prefix: ''; suffix: ' '; }
+@counter-style ptx-marker-10 { system: extends lower-alpha; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-11 { system: extends ; prefix: ''; suffix: ' '; }
+@counter-style ptx-marker-12 { system: extends decimal; prefix: 'T'; suffix: '. '; }
+@counter-style ptx-marker-13 { system: extends decimal; prefix: 'V'; suffix: '. '; }
+@counter-style ptx-marker-14 { system: extends decimal; prefix: 'S'; suffix: '. '; }
+@counter-style ptx-marker-15 { system: extends lower-alpha; prefix: ''; suffix: '.  '; }
+</style>
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+lang: "en-US",
+});
+</script><script defer data-pretext-mathjax="true" onerror="this.dataset.loadFailed = 'true';" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:title" content="MTH 261 Intro to Linear Algebra: Fall 2026">
+<meta property="og:title" content="MTH 261 Intro to Linear Algebra: Fall 2026">
+<meta property="book:title" content="MTH 261 Intro to Linear Algebra: Fall 2026">
+<meta name="twitter:description" content="A simple string (no markup is allowed) to describe your book.">
+<meta property="og:description" content="A simple string (no markup is allowed) to describe your book.">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.54"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.54"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.3.2';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.6ad113829064d43a.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.02090e9f6a81e70e.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.347e2ecdeacfed99.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="changeme" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="MTH261_Fall26.html"><span class="title">MTH 261 Intro to Linear Algebra</span> <span class="subtitle">Fall 2026</span></a></div>
+<p class="byline">Richard Zhao</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
+</div>
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="sec54-Rank.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="MTH261_Fall26.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec71-PropertiesLinearTransformation.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} 
+\newcommand{\Z}{\mathbb Z} 
+\newcommand{\Q}{\mathbb Q} 
+\newcommand{\R}{\mathbb R} 
+
+\newcommand{\ds}{\displaystyle}
+
+\newcommand{\v}[1]{\mathbf{#1}}
+\newcommand{\c}[1]{\mathcal{#1}}
+
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\la}{\left\langle}
+\newcommand{\ra}{\right\rangle}
+
+\newcommand{\proj}{\text{proj}}
+\newcommand{\comp}{\text{comp}}
+\newcommand{\adj}{\text{adj}}
+\newcommand{\rank}{\text{rank}}
+\newcommand{\Nul}{\text{Nul}}
+\newcommand{\Col}{\text{Col}}
+\newcommand{\im}{\text{im}}
+\newcommand{\span}{\text{span}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch1-SystemLinearEquation.html" class="internal"><span class="codenumber">1</span> <span class="title">Systems of Linear Equations</span></a></div>
+<ul id="ptx-toc-group-ch1-SystemLinearEquation" class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec11-SolutionsElementaryOperations.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Solutions and Elementary Operations</span></a></div>
+<ul id="ptx-toc-group-sec11-SolutionsElementaryOperations" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec11-SolutionsElementaryOperations.html#subsec-SolvingSystemsEquations" class="internal"><span class="title">Solving Systems of Linear Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec11-SolutionsElementaryOperations.html#subsec-AugmentedMatrices" class="internal"><span class="title">Augmented Matrices and Elementary Operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec11-SolutionsElementaryOperations.html#subsec-NumberOfSolution" class="internal"><span class="title">How many solutions can a linear system have?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec11-SolutionsElementaryOperations.html#subsec-ExistenceUniqueness-SystemEquations" class="internal"><span class="title">Existence and Uniqueness Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec12-GaussianElimination.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Gaussian Elimination</span></a></div>
+<ul id="ptx-toc-group-sec12-GaussianElimination" class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec12-GaussianElimination.html#subsubsec-NumberOfParameters" class="internal"><span class="title">How many parameters does the solution have?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec12-GaussianElimination.html#subsec-ExistenceUniqueness-AugmentedMatrices" class="internal"><span class="title">Existence and Uniqueness Questions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec13-HomogeneousEquations.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Homogeneous Equations</span></a></div>
+<ul id="ptx-toc-group-sec13-HomogeneousEquations" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec13-HomogeneousEquations.html#subsec-HomogeneousSystem-BasisVectors" class="internal"><span class="title">Basis Vectors and Linear Combinations</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch2-MatrixAlgebra.html" class="internal"><span class="codenumber">2</span> <span class="title">Matrix Algebra</span></a></div>
+<ul id="ptx-toc-group-ch2-MatrixAlgebra" class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec21-BasicMatrixOperations.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Matrix Addition, Scalar Multiplication, and Transposition</span></a></div>
+<ul id="ptx-toc-group-sec21-BasicMatrixOperations" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec21-BasicMatrixOperations.html#subsec-MatrixIntro" class="internal"><span class="title">What exactly is a matrix?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec21-BasicMatrixOperations.html#subsec-BasicMatrixOperations" class="internal"><span class="title">Basic Matrix Operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec21-BasicMatrixOperations.html#subsec-SubscriptNotationMatrices" class="internal"><span class="title">Subscript Notation for Matrices</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec21-BasicMatrixOperations.html#subsec-Rules-MatrixAdditionScalarMultiplication" class="internal"><span class="title">Rules for Matrix Addition and Scalar Multiplication</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec21-BasicMatrixOperations.html#subsec-Rules-TransposeMatrices" class="internal"><span class="title">Rules for Transposes</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec22-MatrixVectorMultiplication.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Matrix-Vector Multiplication</span></a></div>
+<ul id="ptx-toc-group-sec22-MatrixVectorMultiplication" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec22-MatrixVectorMultiplication.html#subsec-Basics-Vector" class="internal"><span class="title">Quick Notes about Vector Notation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec22-MatrixVectorMultiplication.html#subsec-DecodeAugmentedMatrix" class="internal"><span class="title">What exactly is an Augmented Matrix?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec22-MatrixVectorMultiplication.html#subsec-MultiplyingMatrixVector" class="internal"><span class="title">Multiplying a Matrix by a Vector</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec22-MatrixVectorMultiplication.html#subsec-ExistenceUniqueness-Rank" class="internal"><span class="title">Existence and Uniqueness Questions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec22-MatrixVectorMultiplication.html#subsec-VectorEquations" class="internal"><span class="title">Vector Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec22-MatrixVectorMultiplication.html#subsec-LinearTransformations-Intro" class="internal"><span class="title">Intro to Linear Transformations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec22-MatrixVectorMultiplication.html#subsec-DotProduct-Intro" class="internal"><span class="title">Intro to the Dot Product</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec22-MatrixVectorMultiplication.html#subsec-ZeroMatrix-IdentityMatrix" class="internal"><span class="title">Two Special Matrices</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec23-MatrixMultiplication.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Matrix Multiplication</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec24-MatrixInverse.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Matrix Inverses</span></a></div>
+<ul id="ptx-toc-group-sec24-MatrixInverse" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec24-MatrixInverse.html#subsec-InverseMatrices" class="internal"><span class="title">Inverse of a Matrix</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec24-MatrixInverse.html#subsec-ImportantTheorems-Inverses" class="internal"><span class="title">Important Theorems and Facts about Inverses</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec25-ElementaryMatrices.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Elementary Matrices</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec26-LinearTransformations.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Linear Transformations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch3-DeterminantsDiagonalization.html" class="internal"><span class="codenumber">3</span> <span class="title">Determinants and Diagonalization</span></a></div>
+<ul id="ptx-toc-group-ch3-DeterminantsDiagonalization" class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec31-CofactorExpansion.html" class="internal"><span class="codenumber">3.1</span> <span class="title">The Cofactor Expansion</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec32-DeterminantsInverse.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Determinants and Matrix Inverses</span></a></div>
+<ul id="ptx-toc-group-sec32-DeterminantsInverse" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec32-DeterminantsInverse.html#subsec-Theorems-Determinants" class="internal"><span class="title">Important Theorems about Determinants</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec32-DeterminantsInverse.html#subsec-Applications_Determinants" class="internal"><span class="title">Applications using Determinants</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec33-EigenvaluesEigenvectors.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Eigenvalues and Eigenvectors</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec34-Diagonalization.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Diagonalization</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch4-VectorGeometry.html" class="internal"><span class="codenumber">4</span> <span class="title">Vector Geometry</span></a></div>
+<ul id="ptx-toc-group-ch4-VectorGeometry" class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec41-VectorsLines.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Vectors and Lines</span></a></div>
+<ul id="ptx-toc-group-sec41-VectorsLines" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec41-VectorsLines.html#subsec-BasicVectorR2" class="internal"><span class="title">Vectors in <span class="process-math">\(\boldsymbol{\R^2}\)</span> and <span class="process-math">\(\R^3\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec41-VectorsLines.html#subsec-AttributesVector" class="internal"><span class="title">The Attributes of Vectors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec41-VectorsLines.html#subsec-VectorAlgebra" class="internal"><span class="title">Vector Algebra (Geometry Version)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec41-VectorsLines.html#subsec-LinesR3" class="internal"><span class="title">Lines in <span class="process-math">\(\R^3\)</span></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec42-ProjectionsPlanes.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Projections and Planes</span></a></div>
+<ul id="ptx-toc-group-sec42-ProjectionsPlanes" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec42-ProjectionsPlanes.html#subsec-DotProduct" class="internal"><span class="title">Dot Product</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec42-ProjectionsPlanes.html#subsec-DotProduct-Angles" class="internal"><span class="title">Angle between Two Vectors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec42-ProjectionsPlanes.html#subsec-OrthogonalProjection" class="internal"><span class="title">Orthogonal Projection</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec42-ProjectionsPlanes.html#subsec-PlanesR3" class="internal"><span class="title">Planes in <span class="process-math">\(\R^3\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec42-ProjectionsPlanes.html#subsec-IntersectionLinePlane" class="internal"><span class="title">Intersection of a Line and a Plane</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec42-ProjectionsPlanes.html#subsec-ParallelIntersecting" class="internal"><span class="title">Parallel and Intersecting Planes</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch5-VectorSpace.html" class="internal"><span class="codenumber">5</span> <span class="title">Vector Space <span class="process-math">\(\R^n\)</span></span></a></div>
+<ul id="ptx-toc-group-ch5-VectorSpace" class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec51-SubspaceSpanning.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Subspaces and Spanning</span></a></div>
+<ul id="ptx-toc-group-sec51-SubspaceSpanning" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec51-SubspaceSpanning.html#subsec-SubspaceIntro" class="internal"><span class="title">What is a Subspace?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec51-SubspaceSpanning.html#subsec-FundamentalSubspaces" class="internal"><span class="title">Fundamental Subspaces</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec51-SubspaceSpanning.html#subsec-Span" class="internal"><span class="title">Span and Spanning Sets</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec52-IndependenceDimension.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Independence and Dimension</span></a></div>
+<ul id="ptx-toc-group-sec52-IndependenceDimension" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec52-IndependenceDimension.html#subsec-LinearIndependence" class="internal"><span class="title">Linear Independence</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec52-IndependenceDimension.html#subsec-Basis" class="internal"><span class="title">Basis</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec52-IndependenceDimension.html#subsec-Dimensions" class="internal"><span class="title">Dimensions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec52-IndependenceDimension.html#subsec-ExtendedInvertibleMatrixTheorem" class="internal"><span class="title">Extending Our Invertible Matrix Theorem!</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec53-Orthogonality.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Orthogonality</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec54-Rank.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Rank of a Matrix</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch7-LinearTransformation.html" class="internal"><span class="codenumber">6</span> <span class="title">Linear Transformations</span></a></div>
+<ul class="structural toc-item-list active" id="ptx-toc-group-ch7-LinearTransformation"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec71-PropertiesLinearTransformation.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Examples and Elementary Properties</span></a></div>
+<ul id="ptx-toc-group-sec71-PropertiesLinearTransformation" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec71-PropertiesLinearTransformation.html#subsec-VectorSpaces-Intro" class="internal"><span class="title">Vector Spaces</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec71-PropertiesLinearTransformation.html#subsec-LinearTransformation-VectorSpaces" class="internal"><span class="title">(Revisiting) Linear Transformation!</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec71-PropertiesLinearTransformation.html#subsec-VectorRepresentation-VectorSpaces" class="internal"><span class="title">Representation of Vectors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec71-PropertiesLinearTransformation.html#subsec-StandardMatrix-VectorSpaces" class="internal"><span class="title">Standard Matrix of a Linear Transformation</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="appendixA-ExamReviews.html" class="internal"><span class="codenumber">A.</span> <span class="title">Exam Reviews Page</span></a></div>
+<ul id="ptx-toc-group-appendixA-ExamReviews" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="appendixA-ExamReviews-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="secA1-MidtermReview.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Midterm Review</span></a></div>
+<ul id="ptx-toc-group-secA1-MidtermReview" class="structural toc-item-list">
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="secA1-MidtermReview.html#ws-MidtermReview-SystemEquations" class="internal"><span class="title">Systems of Linear Equations</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="secA1-MidtermReview.html#ws-MidtermReview-RowEchelonForm" class="internal"><span class="title">(Reduced) Row Echelon Form</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="secA1-MidtermReview.html#ws-MidtermReview-BasicMatrixOperations" class="internal"><span class="title">Basic Matrix Operations</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="secA1-MidtermReview.html#ws-MidtermReview-MatrixMultiplication" class="internal"><span class="title">Multiplying Matrices with Vectors/Matrices</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="secA1-MidtermReview.html#ws-MidtermReview-Inverses" class="internal"><span class="title">Inverses of Matrices</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="secA1-MidtermReview.html#ws-MidtermReview-ElementaryMatrices" class="internal"><span class="title">Elementary Matrices</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="secA1-MidtermReview.html#ws-MidtermReview-LinearTransformations" class="internal"><span class="title">Linear Transformations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="secA2-FinalReview.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Final Review</span></a></div>
+<ul id="ptx-toc-group-secA2-FinalReview" class="structural toc-item-list">
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="secA2-FinalReview.html#ws-MidtermReview-Determinants" class="internal"><span class="title">Determinants (and related stuff)</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="secA2-FinalReview.html#ws-MidtermReview-VectorGeometry" class="internal"><span class="title">Vector Geometry</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="secA2-FinalReview.html#ws-Subspaces" class="internal"><span class="title">Subspaces (and related stuff)</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="secA2-FinalReview.html#ws-Orthogonality" class="internal"><span class="title">Orthogonality</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="secA2-FinalReview.html#ws-RankNullity" class="internal"><span class="title">Column Space &amp; Null Space</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="secA2-FinalReview.html#ws-FinalReview-EigenStuff" class="internal"><span class="title">Eigen-related Stuff</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch7-LinearTransformation">
+<h1 class="heading">
+<span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Linear Transformations</span>
+</h1>
+<nav class="summary-links"><ul><li><a href="sec71-PropertiesLinearTransformation.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Examples and Elementary Properties</span></a></li></ul></nav><div class="autopermalink" aria-hidden="true" data-description="Chapter 6: Linear Transformations"><a tabindex="-1" href="#ch7-LinearTransformation" title="Copy heading and permalink for Chapter 6: Linear Transformations" aria-label="Copy heading and permalink for Chapter 6: Linear Transformations">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec54-Rank.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec71-PropertiesLinearTransformation.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
