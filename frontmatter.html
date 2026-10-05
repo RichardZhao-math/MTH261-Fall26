@@ -23,6 +23,9 @@
 @counter-style ptx-marker-1 { system: extends decimal; prefix: ''; suffix: '. '; }
 @counter-style ptx-marker-2 { system: extends decimal; prefix: '('; suffix: ') '; }
 @counter-style ptx-marker-3 { system: extends lower-alpha; prefix: '('; suffix: ') '; }
+@counter-style ptx-marker-4 { system: extends decimal; prefix: ''; suffix: '.  '; }
+@counter-style ptx-marker-5 { system: extends decimal; prefix: 'Step '; suffix: ': '; }
+@counter-style ptx-marker-6 { system: extends lower-roman; prefix: ''; suffix: '. '; }
 </style>
 <script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
 startMathJax({
@@ -63,14 +66,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.3.2';
+eBookConfig.runestone_version = '8.3.3';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.6ad113829064d43a.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.02090e9f6a81e70e.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<script src="_static/prefix-runtime.dd07797f77620576.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.11d27cdc38930c2c.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.347e2ecdeacfed99.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -160,7 +163,6 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec11-SolutionsElementaryOperations.html#subsec-SolvingSystemsEquations" class="internal"><span class="title">Solving Systems of Linear Equations</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec11-SolutionsElementaryOperations.html#subsec-AugmentedMatrices" class="internal"><span class="title">Augmented Matrices and Elementary Operations</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec11-SolutionsElementaryOperations.html#subsec-NumberOfSolution" class="internal"><span class="title">How many solutions can a linear system have?</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec11-SolutionsElementaryOperations.html#subsec-ExistenceUniqueness-SystemEquations" class="internal"><span class="title">Existence and Uniqueness Questions</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
@@ -176,6 +178,44 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 </ul>
 </li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch2-MatrixAlgebra.html" class="internal"><span class="codenumber">2</span> <span class="title">Matrix Algebra</span></a></div>
+<ul id="ptx-toc-group-ch2-MatrixAlgebra" class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec21-BasicMatrixOperations.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Matrix Addition, Scalar Multiplication, and Transposition</span></a></div>
+<ul id="ptx-toc-group-sec21-BasicMatrixOperations" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec21-BasicMatrixOperations.html#subsec-MatrixIntro" class="internal"><span class="title">What exactly is a matrix?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec21-BasicMatrixOperations.html#subsec-BasicMatrixOperations" class="internal"><span class="title">Basic Matrix Operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec21-BasicMatrixOperations.html#subsec-SubscriptNotationMatrices" class="internal"><span class="title">Subscript Notation for Matrices</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec21-BasicMatrixOperations.html#subsec-Rules-MatrixAdditionScalarMultiplication" class="internal"><span class="title">Rules for Matrix Addition and Scalar Multiplication</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec21-BasicMatrixOperations.html#subsec-Rules-TransposeMatrices" class="internal"><span class="title">Rules for Transposes</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec22-MatrixVectorMultiplication.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Matrix-Vector Multiplication</span></a></div>
+<ul id="ptx-toc-group-sec22-MatrixVectorMultiplication" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec22-MatrixVectorMultiplication.html#subsec-Basics-Vector" class="internal"><span class="title">Quick Notes about Vector Notation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec22-MatrixVectorMultiplication.html#subsec-DecodeAugmentedMatrix" class="internal"><span class="title">What exactly is an Augmented Matrix?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec22-MatrixVectorMultiplication.html#subsec-MultiplyingMatrixVector" class="internal"><span class="title">Multiplying a Matrix by a Vector</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec22-MatrixVectorMultiplication.html#subsec-ExistenceUniqueness-Rank" class="internal"><span class="title">Existence and Uniqueness Questions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec22-MatrixVectorMultiplication.html#subsec-VectorEquations" class="internal"><span class="title">Vector Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec22-MatrixVectorMultiplication.html#subsec-LinearTransformations-Intro" class="internal"><span class="title">Intro to Linear Transformations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec22-MatrixVectorMultiplication.html#subsec-DotProduct-Intro" class="internal"><span class="title">Intro to the Dot Product</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec22-MatrixVectorMultiplication.html#subsec-ZeroMatrix-IdentityMatrix" class="internal"><span class="title">Two Special Matrices</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec23-MatrixMultiplication.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Matrix Multiplication</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec24-MatrixInverse.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Matrix Inverses</span></a></div>
+<ul id="ptx-toc-group-sec24-MatrixInverse" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec24-MatrixInverse.html#subsec-InverseMatrices" class="internal"><span class="title">Inverse of a Matrix</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec24-MatrixInverse.html#subsec-ImportantTheorems-Inverses" class="internal"><span class="title">Important Theorems and Facts about Inverses</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec25-ElementaryMatrices.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Elementary Matrices</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec26-LinearTransformations.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Linear Transformations</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="frontmatter" id="frontmatter"><h1 class="heading">
@@ -185,7 +225,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="author-name">Richard Zhao</div>
 <div class="author-info">Fariborz Maseeh Department of Mathematics + Statistics<br>Portland State University</div>
 </div>
-<div class="date">September 28, 2026</div>
+<div class="date">October 5, 2026</div>
 <nav class="summary-links"><ul><li><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></li></ul></nav><div class="autopermalink" aria-hidden="true" data-description="Front Matter"><a tabindex="-1" href="#frontmatter" title="Copy heading and permalink for Front Matter" aria-label="Copy heading and permalink for Front Matter">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="MTH261_Fall26.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="front-colophon.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
