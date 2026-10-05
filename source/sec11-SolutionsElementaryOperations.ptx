@@ -789,32 +789,4 @@
     </p>
   </subsection>
 
-  <subsection xml:id="subsec-ExistenceUniqueness-SystemEquations">
-    <title>Existence and Uniqueness Questions</title>
-
-    <p>
-      Recall that a system of linear equations can have either no solution, exactly one solution, or infinitely many solutions. 
-      We ask two questions to determine which of these three cases we are in:
-      <ol>
-        <li>
-          <p>
-            Is the system <term>consistent</term>? That is, does a solution <em>exist</em>? 
-          </p>
-        </li>
-        <li>
-          <p>
-            If a solution exists, is it the <em>only</em> one? 
-            That is, is the solution <term>unique</term>?
-          </p>
-        </li>
-      </ol>
-    </p>
-
-    <p>
-      Right now, we can answer these questions by actually solving the system of equations and seeing what happens. 
-      In <xref ref="sec12-GaussianElimination"/>, we will learn how to answer these questions by using only the augmented matrix and elementary row operations without having to write the system of equations out.
-    </p>
-    
-  </subsection>
-
 </section>
