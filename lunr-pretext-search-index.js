@@ -1162,6 +1162,303 @@ var ptx_lunr_docs = [
   "body": " Suppose you have a linear transformation such that Find the matrix for this linear transformation!   Doing some fun linear algebra, we can figure out that So we know that and So the matrix for this transformation is    "
 },
 {
+  "id": "secA1-Midterm1Review",
+  "level": "1",
+  "url": "secA1-Midterm1Review.html",
+  "type": "Section",
+  "number": "A.1",
+  "title": "Midterm #1 Review",
+  "body": " Midterm #1 Review   The midterm exam #1 will cover material from Week 1 Day 1 of the class through Week 3 Day 2. That is, it covers material in the following sections:    Solutions and Elementary Operations     Gaussian Elimination     Homogeneous Equations     Basic Matrix Operations     Matrix-Vector Multiplication     Matrix Multiplication     Matrix Inverses     Elementary Matrices   On this page, you will find review problems for the midterm exam. The final answers are included for each problem. Make sure you spend some time working through these problems and understanding how things work!  A copy of the Midterm Exam #1 Richard gave in his last MTH 261 class is provided at the end of this page (including the soluton!). Feel free to take a practice round if you need to!   A quick reminder: Some class time during the class session before the midterm exam on Monday, July 13 will be a review session. Usually this will be a work day for you to work through some problems together to prepare for the exam. This is also a great opportunity for you to ask questions about anything that is not clear to you!    Systems of Linear Equations   Solve the following system of equations: If the system is consistent, write the solution set as a column vector If the system is inconsistent, explain how you know it.   The solutions are of the form where and are arbitrary constants.     Solve the following system of linear equations: If the system is consistent, write the solution set as a column vector If the system is inconsistent, explain how you know it.   The solution is      Solve the following system of linear equations: If the system is consistent, write the solution set as a column vector If the system is inconsistent, explain how you know it.   The solution is      Solve the following system of equations: If the system is consistent, write the solution set as a linear combination of basic vectors. If the system is inconsistent, explain how you know it.   This one has only the trivial solution      Solve the following system of equations: If the system is consistent, write the solution set as a linear combination of basic vectors. If the system is inconsistent, explain how you know it.   The solutions are of the form , where is an arbitrary constant.     Solve the following system of equations: If the system is consistent, write the solution set as a linear combination of basic vectors. If the system is inconsistent, explain how you know it.   The solutions are of the form , where and are arbitrary constants.      Given the following matrix equivalent to some coefficient matrix , describe all solutions of in parametric vector form.      The solution set in parametric vector form is , where and are arbitrary constants.       The solution set in parametric vector form is , where and are arbitrary constants.       The solution set in parametric vector form is , where , , and are arbitrary constants.       (Reduced) Row Echelon Form    The following augmented matrices represent systems of linear equations. For each matrix:    classify it as being row echelon form, reduced row echelon form, row echelon form adjacent, or none of them.    identify the pivot positions and determine the rank of the matrix.    determine the number of solutions to the system of linear equations (you do not need to find the actual solutions).           Reduced row echelon form  The pivot positions are the (1,1)-entry, (2,2)-entry, and (3,3)-entry. The rank is 3.  Exactly one unique solution.           Row echelon form adjacent  The pivot positions are the (1,1)-entry, (2,2)-entry, and (3,4)-entry. The rank is 3.  No solution.           Reduced row echelon form  The pivot positions are the (1,1)-entry and (2,2)-entry. The rank is 2.  Infinitely many solutions           Reduced row echelon form  The pivot positions are the (1,1)-entry, (2,3)-entry, and (3,4)-entry. The rank is 3.  No solution           Row echelon form  The pivot positions are the (1,1)-entry, (2,2)-entry, (3,3)-entry, and (4,4)-entry. The rank is 4.  Exactly one solution           Reduced row echelon form  The pivot positions are the (1,1)-entry and (2,3)-entry. The rank is 2.  Infinitely many solutions       Row reduce the following matrix to reduced row echelon form. Circle the pivot positions (aka the leading s) in the final matrix and in the original matrix, and list the pivot columns (aka columns that contain a leading ).    The reduced row echelon form is . The pivot positions are at and entries. The pivot columns are Column 1 and Column 2.      In the following exercises, find the solutions of the systems whose augmented matrices are given.      The solution in parametric form is , where is an arbitrary constant.       The solution in parametric form is , where and are arbitrary constants.       The solution in parametric vector form is , where and are arbitrary constants.       Basic Matrix Operations   Let . Compute          Let , , , , and . Compute the following if possible, and if not possible, explain why.                                                     Impossible. is and is ; addition\/subtraction requires identical dimensions.              Impossible. is and is .                   Impossible. is and is .              Multiplying Matrices with Vectors\/Matrices   Compute the following matrix-vector products:                  Impossible. The number of columns in the matrix (2) does not match the number of entries in the vector (3).             Let , , and . Compute and . Compute                                                    Let , , and . Compute the following if possible, and if not possible, explain why.                       Impossible. is not a square matrix ( ), so it cannot be multiplied by itself.    Impossible. The number of columns in (3) does not match the number of rows in (2).              Inverses of Matrices   Find the inverse of the following matrix:                                Let and . Solve the equation using .    .     Find the inverse of of the matrix .   The inverse is       Elementary Matrices   For each of the following elementary matrices, describe the corresponding elementary row operation and write the inverse.                                      Operation: Add times Row 3 to Row 1 (and replace Row 1).  Inverse:     Operation: Swap Row 1 and Row 3.  Inverse: (The matrix is its own inverse).    Operation: Multiply Row 2 by .  Inverse:     Operation: Add times Row 1 to Row 2 (and replace Row 2).  Inverse:     Operation: Swap Row 1 and Row 2.  Inverse:     Operation: Multiply Row 3 by .  Inverse:         Consider the two matrices and . Find an elementary matrix such that .         Write the following matrix AND its inverse as a product of elementary matrices.     and      Write the following matrix AND its inverse as a product of elementary matrices.     and      For your practice (and also to give you an idea of what the exam will be like), you can find the midterm exam #1 Richard gave to his MTH 261 last term. Feel free to use it as a practice run!   Richard's MTH 261 Midterm Exam #1 in Spring 2026 [ Click me to see the solution!]    "
+},
+{
+  "id": "ws-MidtermReview-SystemEquations-2",
+  "level": "2",
+  "url": "secA1-Midterm1Review.html#ws-MidtermReview-SystemEquations-2",
+  "type": "Worksheet Exercise",
+  "number": "A.1.1",
+  "title": "",
+  "body": " Solve the following system of equations: If the system is consistent, write the solution set as a column vector If the system is inconsistent, explain how you know it.   The solutions are of the form where and are arbitrary constants.   "
+},
+{
+  "id": "ws-MidtermReview-SystemEquations-3",
+  "level": "2",
+  "url": "secA1-Midterm1Review.html#ws-MidtermReview-SystemEquations-3",
+  "type": "Worksheet Exercise",
+  "number": "A.1.2",
+  "title": "",
+  "body": " Solve the following system of linear equations: If the system is consistent, write the solution set as a column vector If the system is inconsistent, explain how you know it.   The solution is    "
+},
+{
+  "id": "ws-MidtermReview-SystemEquations-4",
+  "level": "2",
+  "url": "secA1-Midterm1Review.html#ws-MidtermReview-SystemEquations-4",
+  "type": "Worksheet Exercise",
+  "number": "A.1.3",
+  "title": "",
+  "body": " Solve the following system of linear equations: If the system is consistent, write the solution set as a column vector If the system is inconsistent, explain how you know it.   The solution is    "
+},
+{
+  "id": "ws-MidtermReview-SystemEquations-5",
+  "level": "2",
+  "url": "secA1-Midterm1Review.html#ws-MidtermReview-SystemEquations-5",
+  "type": "Worksheet Exercise",
+  "number": "A.1.4",
+  "title": "",
+  "body": " Solve the following system of equations: If the system is consistent, write the solution set as a linear combination of basic vectors. If the system is inconsistent, explain how you know it.   This one has only the trivial solution    "
+},
+{
+  "id": "ws-MidtermReview-SystemEquations-6",
+  "level": "2",
+  "url": "secA1-Midterm1Review.html#ws-MidtermReview-SystemEquations-6",
+  "type": "Worksheet Exercise",
+  "number": "A.1.5",
+  "title": "",
+  "body": " Solve the following system of equations: If the system is consistent, write the solution set as a linear combination of basic vectors. If the system is inconsistent, explain how you know it.   The solutions are of the form , where is an arbitrary constant.   "
+},
+{
+  "id": "ws-MidtermReview-SystemEquations-7",
+  "level": "2",
+  "url": "secA1-Midterm1Review.html#ws-MidtermReview-SystemEquations-7",
+  "type": "Worksheet Exercise",
+  "number": "A.1.6",
+  "title": "",
+  "body": " Solve the following system of equations: If the system is consistent, write the solution set as a linear combination of basic vectors. If the system is inconsistent, explain how you know it.   The solutions are of the form , where and are arbitrary constants.   "
+},
+{
+  "id": "ws-MidtermReview-SystemEquations-8-2",
+  "level": "2",
+  "url": "secA1-Midterm1Review.html#ws-MidtermReview-SystemEquations-8-2",
+  "type": "Worksheet Exercise",
+  "number": "A.1.7",
+  "title": "",
+  "body": "   The solution set in parametric vector form is , where and are arbitrary constants.   "
+},
+{
+  "id": "ws-MidtermReview-SystemEquations-8-3",
+  "level": "2",
+  "url": "secA1-Midterm1Review.html#ws-MidtermReview-SystemEquations-8-3",
+  "type": "Worksheet Exercise",
+  "number": "A.1.8",
+  "title": "",
+  "body": "   The solution set in parametric vector form is , where and are arbitrary constants.   "
+},
+{
+  "id": "ws-MidtermReview-SystemEquations-8-4",
+  "level": "2",
+  "url": "secA1-Midterm1Review.html#ws-MidtermReview-SystemEquations-8-4",
+  "type": "Worksheet Exercise",
+  "number": "A.1.9",
+  "title": "",
+  "body": "   The solution set in parametric vector form is , where , , and are arbitrary constants.   "
+},
+{
+  "id": "ws-MidtermReview-RowEchelonForm-2-2",
+  "level": "2",
+  "url": "secA1-Midterm1Review.html#ws-MidtermReview-RowEchelonForm-2-2",
+  "type": "Worksheet Exercise",
+  "number": "A.1.1",
+  "title": "",
+  "body": "      Reduced row echelon form  The pivot positions are the (1,1)-entry, (2,2)-entry, and (3,3)-entry. The rank is 3.  Exactly one unique solution.    "
+},
+{
+  "id": "ws-MidtermReview-RowEchelonForm-2-3",
+  "level": "2",
+  "url": "secA1-Midterm1Review.html#ws-MidtermReview-RowEchelonForm-2-3",
+  "type": "Worksheet Exercise",
+  "number": "A.1.2",
+  "title": "",
+  "body": "      Row echelon form adjacent  The pivot positions are the (1,1)-entry, (2,2)-entry, and (3,4)-entry. The rank is 3.  No solution.    "
+},
+{
+  "id": "ws-MidtermReview-RowEchelonForm-2-4",
+  "level": "2",
+  "url": "secA1-Midterm1Review.html#ws-MidtermReview-RowEchelonForm-2-4",
+  "type": "Worksheet Exercise",
+  "number": "A.1.3",
+  "title": "",
+  "body": "      Reduced row echelon form  The pivot positions are the (1,1)-entry and (2,2)-entry. The rank is 2.  Infinitely many solutions    "
+},
+{
+  "id": "ws-MidtermReview-RowEchelonForm-2-5",
+  "level": "2",
+  "url": "secA1-Midterm1Review.html#ws-MidtermReview-RowEchelonForm-2-5",
+  "type": "Worksheet Exercise",
+  "number": "A.1.4",
+  "title": "",
+  "body": "      Reduced row echelon form  The pivot positions are the (1,1)-entry, (2,3)-entry, and (3,4)-entry. The rank is 3.  No solution    "
+},
+{
+  "id": "ws-MidtermReview-RowEchelonForm-2-6",
+  "level": "2",
+  "url": "secA1-Midterm1Review.html#ws-MidtermReview-RowEchelonForm-2-6",
+  "type": "Worksheet Exercise",
+  "number": "A.1.5",
+  "title": "",
+  "body": "      Row echelon form  The pivot positions are the (1,1)-entry, (2,2)-entry, (3,3)-entry, and (4,4)-entry. The rank is 4.  Exactly one solution    "
+},
+{
+  "id": "ws-MidtermReview-RowEchelonForm-2-7",
+  "level": "2",
+  "url": "secA1-Midterm1Review.html#ws-MidtermReview-RowEchelonForm-2-7",
+  "type": "Worksheet Exercise",
+  "number": "A.1.6",
+  "title": "",
+  "body": "      Reduced row echelon form  The pivot positions are the (1,1)-entry and (2,3)-entry. The rank is 2.  Infinitely many solutions    "
+},
+{
+  "id": "ws-MidtermReview-RowEchelonForm-3",
+  "level": "2",
+  "url": "secA1-Midterm1Review.html#ws-MidtermReview-RowEchelonForm-3",
+  "type": "Worksheet Exercise",
+  "number": "A.1.7",
+  "title": "",
+  "body": " Row reduce the following matrix to reduced row echelon form. Circle the pivot positions (aka the leading s) in the final matrix and in the original matrix, and list the pivot columns (aka columns that contain a leading ).    The reduced row echelon form is . The pivot positions are at and entries. The pivot columns are Column 1 and Column 2.   "
+},
+{
+  "id": "ws-MidtermReview-RowEchelonForm-4-2",
+  "level": "2",
+  "url": "secA1-Midterm1Review.html#ws-MidtermReview-RowEchelonForm-4-2",
+  "type": "Worksheet Exercise",
+  "number": "A.1.8",
+  "title": "",
+  "body": "   The solution in parametric form is , where is an arbitrary constant.   "
+},
+{
+  "id": "ws-MidtermReview-RowEchelonForm-4-3",
+  "level": "2",
+  "url": "secA1-Midterm1Review.html#ws-MidtermReview-RowEchelonForm-4-3",
+  "type": "Worksheet Exercise",
+  "number": "A.1.9",
+  "title": "",
+  "body": "   The solution in parametric form is , where and are arbitrary constants.   "
+},
+{
+  "id": "ws-MidtermReview-RowEchelonForm-4-4",
+  "level": "2",
+  "url": "secA1-Midterm1Review.html#ws-MidtermReview-RowEchelonForm-4-4",
+  "type": "Worksheet Exercise",
+  "number": "A.1.10",
+  "title": "",
+  "body": "   The solution in parametric vector form is , where and are arbitrary constants.   "
+},
+{
+  "id": "ws-MidtermReview-BasicMatrixOperations-2",
+  "level": "2",
+  "url": "secA1-Midterm1Review.html#ws-MidtermReview-BasicMatrixOperations-2",
+  "type": "Worksheet Exercise",
+  "number": "A.1.1",
+  "title": "",
+  "body": " Let . Compute        "
+},
+{
+  "id": "ws-MidtermReview-BasicMatrixOperations-3",
+  "level": "2",
+  "url": "secA1-Midterm1Review.html#ws-MidtermReview-BasicMatrixOperations-3",
+  "type": "Worksheet Exercise",
+  "number": "A.1.2",
+  "title": "",
+  "body": " Let , , , , and . Compute the following if possible, and if not possible, explain why.                                                     Impossible. is and is ; addition\/subtraction requires identical dimensions.              Impossible. is and is .                   Impossible. is and is .           "
+},
+{
+  "id": "ws-MidtermReview-MatrixMultiplication-2",
+  "level": "2",
+  "url": "secA1-Midterm1Review.html#ws-MidtermReview-MatrixMultiplication-2",
+  "type": "Worksheet Exercise",
+  "number": "A.1.1",
+  "title": "",
+  "body": " Compute the following matrix-vector products:                  Impossible. The number of columns in the matrix (2) does not match the number of entries in the vector (3).           "
+},
+{
+  "id": "ws-MidtermReview-MatrixMultiplication-3",
+  "level": "2",
+  "url": "secA1-Midterm1Review.html#ws-MidtermReview-MatrixMultiplication-3",
+  "type": "Worksheet Exercise",
+  "number": "A.1.2",
+  "title": "",
+  "body": " Let , , and . Compute and . Compute                                                  "
+},
+{
+  "id": "ws-MidtermReview-MatrixMultiplication-4",
+  "level": "2",
+  "url": "secA1-Midterm1Review.html#ws-MidtermReview-MatrixMultiplication-4",
+  "type": "Worksheet Exercise",
+  "number": "A.1.3",
+  "title": "",
+  "body": " Let , , and . Compute the following if possible, and if not possible, explain why.                       Impossible. is not a square matrix ( ), so it cannot be multiplied by itself.    Impossible. The number of columns in (3) does not match the number of rows in (2).           "
+},
+{
+  "id": "ws-MidtermReview-Inverses-2",
+  "level": "2",
+  "url": "secA1-Midterm1Review.html#ws-MidtermReview-Inverses-2",
+  "type": "Worksheet Exercise",
+  "number": "A.1.1",
+  "title": "",
+  "body": " Find the inverse of the following matrix:                              "
+},
+{
+  "id": "ws-MidtermReview-Inverses-3",
+  "level": "2",
+  "url": "secA1-Midterm1Review.html#ws-MidtermReview-Inverses-3",
+  "type": "Worksheet Exercise",
+  "number": "A.1.2",
+  "title": "",
+  "body": " Let and . Solve the equation using .    .   "
+},
+{
+  "id": "ws-MidtermReview-Inverses-4",
+  "level": "2",
+  "url": "secA1-Midterm1Review.html#ws-MidtermReview-Inverses-4",
+  "type": "Worksheet Exercise",
+  "number": "A.1.3",
+  "title": "",
+  "body": " Find the inverse of of the matrix .   The inverse is    "
+},
+{
+  "id": "ws-MidtermReview-ElementaryMatrices-2",
+  "level": "2",
+  "url": "secA1-Midterm1Review.html#ws-MidtermReview-ElementaryMatrices-2",
+  "type": "Worksheet Exercise",
+  "number": "A.1.1",
+  "title": "",
+  "body": " For each of the following elementary matrices, describe the corresponding elementary row operation and write the inverse.                                      Operation: Add times Row 3 to Row 1 (and replace Row 1).  Inverse:     Operation: Swap Row 1 and Row 3.  Inverse: (The matrix is its own inverse).    Operation: Multiply Row 2 by .  Inverse:     Operation: Add times Row 1 to Row 2 (and replace Row 2).  Inverse:     Operation: Swap Row 1 and Row 2.  Inverse:     Operation: Multiply Row 3 by .  Inverse:       "
+},
+{
+  "id": "ws-MidtermReview-ElementaryMatrices-3",
+  "level": "2",
+  "url": "secA1-Midterm1Review.html#ws-MidtermReview-ElementaryMatrices-3",
+  "type": "Worksheet Exercise",
+  "number": "A.1.2",
+  "title": "",
+  "body": " Consider the two matrices and . Find an elementary matrix such that .       "
+},
+{
+  "id": "ws-MidtermReview-ElementaryMatrices-4",
+  "level": "2",
+  "url": "secA1-Midterm1Review.html#ws-MidtermReview-ElementaryMatrices-4",
+  "type": "Worksheet Exercise",
+  "number": "A.1.3",
+  "title": "",
+  "body": " Write the following matrix AND its inverse as a product of elementary matrices.     and    "
+},
+{
+  "id": "ws-MidtermReview-ElementaryMatrices-5",
+  "level": "2",
+  "url": "secA1-Midterm1Review.html#ws-MidtermReview-ElementaryMatrices-5",
+  "type": "Worksheet Exercise",
+  "number": "A.1.4",
+  "title": "",
+  "body": " Write the following matrix AND its inverse as a product of elementary matrices.     and    "
+},
+{
+  "id": "secA1-Midterm1Review-10",
+  "level": "2",
+  "url": "secA1-Midterm1Review.html#secA1-Midterm1Review-10",
+  "type": "Figure",
+  "number": "A.1.1",
+  "title": "",
+  "body": " Richard's MTH 261 Midterm Exam #1 in Spring 2026 [ Click me to see the solution!]   "
+},
+{
   "id": "backmatter-2",
   "level": "1",
   "url": "backmatter-2.html",

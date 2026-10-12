@@ -26,6 +26,8 @@
 @counter-style ptx-marker-4 { system: extends decimal; prefix: ''; suffix: '.  '; }
 @counter-style ptx-marker-5 { system: extends decimal; prefix: 'Step '; suffix: ': '; }
 @counter-style ptx-marker-6 { system: extends lower-roman; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-7 { system: extends lower-alpha; prefix: ''; suffix: '.  '; }
+@counter-style ptx-marker-8 { system: extends lower-alpha; prefix: ''; suffix: '. '; }
 </style>
 <script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
 startMathJax({
@@ -66,15 +68,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.3.3';
+eBookConfig.runestone_version = '8.3.5';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.dd07797f77620576.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.11d27cdc38930c2c.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.347e2ecdeacfed99.css">
+<script src="_static/prefix-runtime.3adcbea95009347b.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.7a45395f326e122c.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.9963089870a016c8.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -121,7 +123,7 @@ eBookConfig.enable_chatcodes =  false;
 <legend>Assistive technologies</legend>
 <label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
 </fieldset>
-<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="sec25-ElementaryMatrices.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch2-MatrixAlgebra.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="sec25-ElementaryMatrices.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch2-MatrixAlgebra.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="appendixA-ExamReviews.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} 
 \newcommand{\Z}{\mathbb Z} 
 \newcommand{\Q}{\mathbb Q} 
@@ -214,6 +216,23 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec25-ElementaryMatrices.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Elementary Matrices</span></a></div></li>
 <li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec26-LinearTransformations.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Linear Transformations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="appendixA-ExamReviews.html" class="internal"><span class="codenumber">A.</span> <span class="title">Exam Reviews Page</span></a></div>
+<ul id="ptx-toc-group-appendixA-ExamReviews" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="appendixA-ExamReviews-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="secA1-Midterm1Review.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Midterm #1 Review</span></a></div>
+<ul id="ptx-toc-group-secA1-Midterm1Review" class="structural toc-item-list">
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="secA1-Midterm1Review.html#ws-MidtermReview-SystemEquations" class="internal"><span class="codenumber">A.1</span> <span class="title">Systems of Linear Equations</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="secA1-Midterm1Review.html#ws-MidtermReview-RowEchelonForm" class="internal"><span class="codenumber">A.1</span> <span class="title">(Reduced) Row Echelon Form</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="secA1-Midterm1Review.html#ws-MidtermReview-BasicMatrixOperations" class="internal"><span class="codenumber">A.1</span> <span class="title">Basic Matrix Operations</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="secA1-Midterm1Review.html#ws-MidtermReview-MatrixMultiplication" class="internal"><span class="codenumber">A.1</span> <span class="title">Multiplying Matrices with Vectors/Matrices</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="secA1-Midterm1Review.html#ws-MidtermReview-Inverses" class="internal"><span class="codenumber">A.1</span> <span class="title">Inverses of Matrices</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="secA1-Midterm1Review.html#ws-MidtermReview-ElementaryMatrices" class="internal"><span class="codenumber">A.1</span> <span class="title">Elementary Matrices</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
@@ -1043,7 +1062,7 @@ T\lp \begin{bmatrix} 0 \\ 1 \end{bmatrix} \rp = \frac{7}{9} \begin{bmatrix} 1 \\
 </section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="sec25-ElementaryMatrices.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec25-ElementaryMatrices.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="appendixA-ExamReviews.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
