@@ -21,7 +21,7 @@
     <xi:include href="./ch7-LinearTransformation.ptx" />-->
 
     <!-- Include Appendices -->
-    <!--<xi:include href="./appendixA-ExamReviews.ptx" />-->
+    <xi:include href="./appendixA-ExamReviews.ptx" />
 
     <!-- Include backmatter -->
     <xi:include href="./backmatter.ptx" />

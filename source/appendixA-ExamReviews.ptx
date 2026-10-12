@@ -11,11 +11,15 @@
     <assemblage>
         <title>Exam Dates</title>
         <p>
-            Midterm Exam will be in class on <alert>Wednesday, July 15</alert>, from 11:00am to 12:50pm. 
+            Midterm Exam #1 will be in class on <alert>Wednesday, October 21</alert>, from 9:00am to 10:40am. 
         </p>
 
         <p>
-            Final Exam will be in class on <alert>Wednesday, August 12</alert>, from 11:00am to 12:50pm. 
+            Midterm Exam #2 will be in class on <alert>Wednesday, November 18</alert>, from 9:00am to 10:40am. 
+        </p>
+
+        <p>
+            Final Exam will be in class on <alert>Monday, December 7</alert>, from 9:00am to 10:50am. 
         </p>
 
         <p>
@@ -24,7 +28,8 @@
     </assemblage>
 
     <p>
-        You may use a calculator and one sheet (8.5" x 11") of <alert>handwritten</alert> notes for each exam. 
+        The exams will be <alert>closed-book</alert> and <alert>no-notes</alert>.
+        A calculator is permitted on the exam. 
         <alert>Remember to show all of your work for full credits. </alert>
         Richard values mathematical reasoning/justification a lot more than just the correct answers. 
         Correct answers with no or minimal work will not receive full credits. Calculator-generated answers without human support will also not receive full credits!
@@ -189,6 +194,111 @@
         </p>
     </remark>
 
+    <remark>
+        <title>Can I use AI to help me study? </title>
+
+        <p>
+            Sure as long as you are using AI to help you learn, NOT replace you in the learning process. 
+        </p>
+
+        <p>
+            A colleague of mine shared with me her <alert>AI Use Policy for Math</alert> in case you are wondering how AI can (and should) be used in a math class. 
+            But she is teaching an online class so some of the items may not make sense in the context of our class... 
+            Hope her list helps! 
+        </p>
+
+        <p><alert>AI Use Policy for Math</alert></p>
+    
+        <p>
+            AI can be a useful study tool when it strengthens learning rather than replacing thinking. 
+            In this course, AI may be used to review concepts, generate additional practice, explain ideas, and help study. 
+            It may not be used to complete, check, explain, or rewrite graded course work unless an assignment explicitly states that AI is allowed.
+        </p>
+        <p>
+            AI includes tools such as ChatGPT, Gemini, Claude, Microsoft Copilot, NotebookLM, AI-generated search responses, and generative AI features in tools such as Google products and Grammarly.
+        </p>
+
+        <p><alert>The Main Rule</alert></p>
+        <p>
+            AI can help you learn how to do the math. 
+            It cannot do, check, explain, or improve the specific math you are submitting for a grade.
+        </p>
+        <p>
+            Do not paste, type, screenshot, photograph, or upload graded course questions into AI.
+        </p>
+
+        <p><alert>Acceptable Uses of AI</alert></p>
+        <p>AI may be used to:</p>
+        <ul>
+            <li><p>Explain a general concept in simpler language.</p></li>
+            <li><p>Review vocabulary, formulas, or key ideas.</p></li>
+            <li><p>Create flashcards, study guides, or practice quizzes.</p></li>
+            <li><p>Create new practice problems using different numbers or contexts.</p></li>
+            <li><p>Walk through a separate example.</p></li>
+            <li><p>Ask guiding questions or provide hints while studying.</p></li>
+            <li><p>Help identify concepts that need more practice.</p></li>
+        </ul>
+
+        <p><alert>Example Prompts</alert></p>
+        
+        <p><alert>Learn a Concept</alert></p>
+        <ul>
+            <li><p>"Explain [topic] to me like I am in 5th grade, then give me a simple example."</p></li>
+            <li><p>"I am confused about [topic]. Explain how it works, then ask me questions to make sure I understand."</p></li>
+            <li><p>"Explain the difference between [concept 1] and [concept 2] using your own examples."</p></li>
+        </ul>
+
+        <p><alert>Practice and Review</alert></p>
+        <ul>
+            <li><p>"Quiz me on the vocabulary, formulas, and concepts for [topic]. Ask one question at a time and wait for my answer. If I make a mistake, help me figure out why before giving me another similar question."</p></li>
+            <li><p>"Create three new practice problems about [topic], starting easy and getting harder. Let me try each one before showing the solution."</p></li>
+            <li><p>"Create a five-question practice quiz over [topic] using completely new questions."</p></li>
+        </ul>
+
+        <p><alert>Get Help Without Getting the Answer</alert></p>
+        <ul>
+            <li><p>"I am learning how to solve this type of problem. Give me a new example and guide me through it by asking questions instead of immediately giving me the answer."</p></li>
+            <li><p>"I understand the first step but get stuck after that. Teach me the process using your own example."</p></li>
+            <li><p>"Give me a hint about what I should think about first, but do not solve the problem for me."</p></li>
+            <li><p>"Teach me a strategy for approaching this type of math problem, then give me one to try independently."</p></li>
+        </ul>
+
+        <p><alert>Study With AI</alert></p>
+        <ul>
+            <li><p>"Act as my math tutor. Ask me one question at a time about this unit. If I make a mistake, give me a hint before explaining it."</p></li>
+            <li><p>"Help me study this topic using retrieval practice. Ask me questions instead of giving me a summary."</p></li>
+            <li><p>"Create a study guide from these notes with important concepts, vocabulary, formulas, and new practice questions."</p></li>
+        </ul>
+
+        <p><alert>Not Allowed Uses of AI</alert></p>
+        <p>AI may not be used to:</p>
+        <ul>
+            <li><p>Upload or enter an assigned Learning Assignment, practice assignment, lab/discussion, quiz, or exam question.</p></li>
+            <li><p>Solve or explain an assigned graded question.</p></li>
+            <li><p>Check whether an answer to a graded question is correct.</p></li>
+            <li><p>Find or fix errors in work being submitted for credit.</p></li>
+            <li><p>Write, rewrite, improve, or complete a response that will be submitted for credit.</p></li>
+            <li><p>Generate work and then slightly change the wording before submitting it.</p></li>
+            <li><p>Be used in any way during a quiz or exam.</p></li>
+        </ul>
+
+        <p><alert>What to Do When Stuck</alert></p>
+        <ul>
+            <li><p>Review the guided video notes and worked examples.</p></li>
+            <li><p>Return to the lecture video through the Learning Assignment and use Practice mode.</p></li>
+            <li><p>Try a similar practice problem.</p></li>
+            <li><p>Post in the Q&amp;A board.</p></li>
+            <li><p>Email me with a screenshot and explain where the difficulty began.</p></li>
+            <li><p>Attend office/student hours or work with PCC tutoring.</p></li>
+        </ul>
+        <p>
+            Use AI to learn the general concept or practice with a different problem, not to work on the assigned graded question.
+        </p>
+        <p>
+            The goal is not to prevent the use of AI. The goal is to use it in ways that strengthen learning while making sure graded work reflects each student's own understanding and skills.
+        </p>
+    </remark>
+
     <p>
         Below are some review materials for the exams. 
         Feel free to check them out and use them for your review!
@@ -196,7 +306,7 @@
   </introduction>
 
   <!-- include sections -->
-  <xi:include href="secA1-MidtermReview.ptx" />
-  <xi:include href="secA2-FinalReview.ptx" />
+  <xi:include href="secA1-Midterm1Review.ptx" />
+  <!--<xi:include href="secA2-FinalReview.ptx" />-->
 
 </appendix>
