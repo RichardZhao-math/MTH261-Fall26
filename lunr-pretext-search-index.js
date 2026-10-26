@@ -1162,6 +1162,528 @@ var ptx_lunr_docs = [
   "body": " Suppose you have a linear transformation such that Find the matrix for this linear transformation!   Doing some fun linear algebra, we can figure out that So we know that and So the matrix for this transformation is    "
 },
 {
+  "id": "sec31-CofactorExpansion",
+  "level": "1",
+  "url": "sec31-CofactorExpansion.html",
+  "type": "Section",
+  "number": "3.1",
+  "title": "The Cofactor Expansion",
+  "body": " The Cofactor Expansion   You may recall we learned a special formula back in that computes the determinant of a matrix. But what does it mean?  Determinant is really a special linear operator with special properties that we won't be able to make sense of fully in this class. Instead, we will focus on how to compute the determinant in this section.    After this section, students will be able to:     Compute the determinant of an matrix in various methods.    Determine the cofactors, including the signs.      The cofactor expansion is a method to compute the determinant of a matrix.  But what's the determinant of a matrix? We won't be able to answer this question now since we haven't gotten into vector geometry yet. Right now, you can think of the determinant of a matrix a special number associated with the matrix that tells us many things about the matrix (e.g., its invertibility).  Notation-wise, the determinant of the matrix is denoted by . When we are working with a specific matrix, we replace the brackets with absolute values and then it stands for the determinant (which is a number) rather than a matrix.  For example, the determinant of the matrix is denoted by   If you are super interested in knowing what the determinant represents, check out the following video:   The Determinant    In this section, we will focus on how to compute the determinant rather than what the number tells us.   Let's find the determinant of the matrix using the method of cofactor expansion!  The way to do so is to pick one row or column to expand on. We can pick any of them:  Let's pick Row 1: So the determinant of this matrix is .  Alternatively, we can pick Column 2 to expand on: See the determinant is the same!   So how does it work?   Pick a row or a column.    For each entry, multiply it by the determinant of the matrix you get by eliminating the row and the column that the entry is in .    If the row number plus the column number is odd, multiply the little determinant by .    Add up all the products.   Here is a strategy to help us pick a row or a column to expand on: If possible, pick the row\/column that has the most zeros in it, since we don't have to compute any of the little determinants of those (as they will be multiplied by zero!).   Use the cofactor expansion method to compute the determinant of the matrix in the following two ways:   Expand on Row 2.    Expand on Column 3.      First expand on Row 2:  Note: It doesn't hurt anything if you calculate the part where it says \"stuff\", but it isn't necessary since that gets multiplied by zero.  Second expand on Column 3:     The main idea of the cofactor expansion is that it allows us to build up the determinant of a matrix using the determinants of smaller matrices . So once we know how to compute the determinant of matrices, we can use that to figure out the determinant of a matrix. And then we could use that to figure out how to compute the determinant of a matrix (and etc...)  The products we add up ( or times the little determinant) during the cofactor expansion procedures are called the cofactors .   Formal Definition of Cofactors   Given an matrix , let be the matrix obtained by deleting the th row and the th column of . Then the cofactor is     The is the part of the formula that does the multiplication by or :   If the sum of the row number and the column number is odd, we get the ;    If the sum of the row number and the column number is even, we get the .   So to get a cofactor, we will find out little determinant and then either change its sign or leave it alone.  We can anticipate when we need to change the sign when computing a cofactor by imagining a checkerboard pattern of or overlaying the matrix. For example, for a matrix, we would have the pattern We canmake the right pattern for any matrix by making this checkerboard pattern starting with a in the -entry.  Then the determinant of a matrix can be calculated by multiplying each entry of a row (or column) of the matrix by its cofactor and then summing the results.   Some special Formulas to Find the Determinants  While the cofactor expansion is the \"formal' way to compute the determinant of a matrix, there are some special formulas that can be used to compute the determinants.  We have been using the special formula to find the determinant of a matrix all the time. That is, You can verify this formula by using the cofactor expansion method to compute the determinant of a matrix.  There is also a special formula for the determinant of a matrix. That is, let . Then Hmm but how can we memorize such a complicated formula...  There is a procedure that leads to this formula. This is usually the way Richard recommended his MTH 254 students (as opposed to memorizing the complicated formula).  Here are the steps to compute the determinant of a 3x3 matrix using the lattice method:   Write down the 3x3 matrix and then duplicate the first two columns to the right of the matrix.    Draw diagonals from the top left to bottom right and multiply the three numbers on each diagonal. Then add these products together.    Next, draw diagonals from the top right to bottom left and multiply the three numbers on each diagonal. Then add these products together.    Finally, subtract the sum from step 3 from the sum from step 2 to get the determinant.     Below is a more visual representation of the steps above:    Lattice Method to calculate the determinant of a 3x3 matrix   Again, this procedure is only for matrices !!    Let's compute the determinant of a matrix   We will need to pick a row\/column to begin. Observe that Column 2 has the most zeros in it, so let's pick that one! So we need to compute these two determinants: by picking Row 3 to expand on, and by picking Row 1 to expand on.  So    If you are asked to compute the matrix of a large matrix, you are REALLY hoping it has a row or column with a bunch of zeros otherwise you will be computing a bunch of determinants each of which requires you to compute a bunch of other determinants.   Compute the determinant of    Observe that Column 3 has three zeros! So let's expand on it! So Let's use Row 2 to compute the determinant we need: So     You may get the sense that the cofactor method can require a lot of calculation and it is MUCH easier when there are a lot of zeros in the matrix. Recall elementary row operations can create zeros in a matrix. A natural question to ask is whether it is possible to use elementary row operations to make a determinant easier to calculate without changing the result.  The answer is yes! And the following theorem tells us how:   Row Operations and Determinants   Let be an matrix. Then   If the matrix has a row or column of zeros its determinant is zero.    If two rows of a matrix are swapped, the sign of the determinant is changed.    If a row (or column) of a matrix is multiplied by a constant, the resulting matrix will have a determinant that is a product of the original determinant and that same constant.    If two rows (or columns) of a matrix are identical, then the determinant of the matrix is zero.    If a multiple of one row of a matrix is added to another row, the determinant of the matrix is unchanged!        But Richard... Why are these things true?  Below are the explanations for each of the statement. Some of them are straightforward and some are tricky. Feel free to click open the ones you are super curious about! You are under no obligation to memorize them or anything!   Explaining the First Statement...  If you used the cofactor method and expanded along the row or column that is all zero, then every cofactor would be multiplied by zero, giving you the answer of zero.    Explaining the Second Statement...  Let's consider rows only (the argument is similar for columns).  In the cases, we can see that while so the answers have opposite sides.  Now if the matrix is bigger than , we can calculate the determinant of both of them using the cofactor method and expanding on a row other than the two that are swapped .   In both calculations, the number each cofactor is multiplied by is unchanged (since we are using the same row in each case).  But for each cofactor calculation, we are computing a determinants. When we compute the ones for the matrix with the swapped rows, we get opposite signs because the rows of each matrix have been swapped.   This is what it would look like when the 1st and 3rd rows are swapped for a matrix: and Notice that all of the determinants in the second version will have opposite signs of the ones in the first version.  For a matrix, we can use the same trick. Again, all of the cofactors will change sign. And so on...   Note: This idea can be turned into a formal proof using the Principal of Mathematical Induction.    Explaining the Third Statement...  This one is straightforward. If we expand on the row\/column that has been multiplied by a constant, none of the cofactors will change. But in the calculation we will get an extra factor in each term since each entry of the row\/column is multiplied by the constant. We can just factor out that constant to see that the determinant has been multiplied by that constant.  Here is what it looks like in the case if we multiply the middle row by : and     Explaining the Fourth Statement...  This is a fun one! Imagine swapping the two rows (or columns) that are identical. By the second statement , the determinant will change signs if we do this.  BUT since the two rows (or columns) are identical, switching the rows (or columns) won't change the matrix at all. So the determinant can't change!  What is the only number that we can multiplied by without changing it? ZERO!     Explaining the Fifth Statement...  This is the trickiest and the most important statement! Let's look at the general case and try to figure out why doing this operation does not change the determinant.  Here is the calculation of the \"before\" matrix, expanding on Row 2: Now let's see what happens if we multiply Row 1 by and add that to Row 2 (we will expand using Row 2 again): Observe that So this part will become since Row 1 and Row 2 are identical. This tells us that See the determinant is the same as the determinant of the general matrix!    So what is this new method for computing determinants?  First, we know that if a matrix has a whole row (or column) of zeros or if it has two identical rows (or columns) the determinant is zero. Second, we know that if we can maximize the number of zeros we get in a row, we can minimize the number of cofactors we actually have to compute.  Actually there is one more even awesome-er fact that we can use to make determinant calculations fairly easy using row operations. We will do an example first and that will show us what that awesome-er fact is.   Let's compute   Step 1: We can add times Row 1 to Row 2 (and replace Row 2). This will not change the determinant.   Step 2: We can add times Row 1 to Row 3 (and replace Row 3). And this again will not change the determinant.   Step 3: We can add Row 2 to Row 4 (and replace Row 4), and the determinant is still unchanged.   Step 4: We can add times Row 3 to Row 4 without changing the determinant!   Notice that we now have all zeros below the main diagonal. At this point, Richard instantly knows that the determinant is going to be . How does he know that?  Watch what happens when we expand along the last row to compute the determinant: Now we need to figure out the determinant of one matrix that also has all zeros below the main diagonal. So... And now we need to figure out the determinant of one matrix that also has all zeros below the main diagonal (well there is only one spot there, but still!). Continuing then, we get...   So it turned out that the answer was just the product of the entries on the diagonal !   If you think about how cofactor expansion works, the determinant of a matrix that has all zeros below the main diagonal should always be the product of the entries on the main diagonal! That means our new method (using row operations) is   Use row operations to put the matrix in a form where it all of the entries below the main diagonal are zeros (this is called upper triangular form).   P.S.: NEVER use the operation where you just multiply a row by a constant and keep track of how many times you swap rows.    Multiply all the entries on the diagonal.   If the number of row swaps you did is even, then this is the answer;    If the number of row swaps you did is odd, multiply it by to get the determinant.        A matrix that only has zeros below the main diagonal is called an upper triangle matrix, and a matrix that only has zeros above the main diagonal is called a lower triangular matrix. We can compute the determinant of these matrices by multiplying all of the entries on the diagonal together .   Use this new row-reduction method to compute the determinant of    We will add Row 1 tp Row 2, times Row 1 to Row 3, and times Row 1 to Row 4. We get: Now we will add times Row 2 to Row 3, and times Row 2 to Row 4. We get: Now we have an upper triangular matrix and can see that .     What is the determinant of the identity matrix (of any size)?   Identity matrix (of any size) is an upper triangular matrix with 's on the main diagonal (It is also a lower triangular matrix!). Hence the determinant is .    We will continue our investigation of determinants more about the properties and applications of determinants in the next section!  "
+},
+{
+  "id": "sec31-CofactorExpansion-2-3",
+  "level": "2",
+  "url": "sec31-CofactorExpansion.html#sec31-CofactorExpansion-2-3",
+  "type": "Objectives",
+  "number": "3.1",
+  "title": "",
+  "body": "  After this section, students will be able to:     Compute the determinant of an matrix in various methods.    Determine the cofactors, including the signs.    "
+},
+{
+  "id": "sec31-CofactorExpansion-3",
+  "level": "2",
+  "url": "sec31-CofactorExpansion.html#sec31-CofactorExpansion-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "cofactor expansion "
+},
+{
+  "id": "sec31-CofactorExpansion-4",
+  "level": "2",
+  "url": "sec31-CofactorExpansion.html#sec31-CofactorExpansion-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "determinant "
+},
+{
+  "id": "sec31-CofactorExpansion-8",
+  "level": "2",
+  "url": "sec31-CofactorExpansion.html#sec31-CofactorExpansion-8",
+  "type": "Figure",
+  "number": "3.1.1",
+  "title": "",
+  "body": " The Determinant   "
+},
+{
+  "id": "sec31-CofactorExpansion-10",
+  "level": "2",
+  "url": "sec31-CofactorExpansion.html#sec31-CofactorExpansion-10",
+  "type": "Example",
+  "number": "3.1.2",
+  "title": "",
+  "body": " Let's find the determinant of the matrix using the method of cofactor expansion!  The way to do so is to pick one row or column to expand on. We can pick any of them:  Let's pick Row 1: So the determinant of this matrix is .  Alternatively, we can pick Column 2 to expand on: See the determinant is the same!  "
+},
+{
+  "id": "sec31-CofactorExpansion-12",
+  "level": "2",
+  "url": "sec31-CofactorExpansion.html#sec31-CofactorExpansion-12",
+  "type": "Checkpoint",
+  "number": "3.1.3",
+  "title": "",
+  "body": " Use the cofactor expansion method to compute the determinant of the matrix in the following two ways:   Expand on Row 2.    Expand on Column 3.      First expand on Row 2:  Note: It doesn't hurt anything if you calculate the part where it says \"stuff\", but it isn't necessary since that gets multiplied by zero.  Second expand on Column 3:    "
+},
+{
+  "id": "def-Cofactor",
+  "level": "2",
+  "url": "sec31-CofactorExpansion.html#def-Cofactor",
+  "type": "Definition",
+  "number": "3.1.4",
+  "title": "Formal Definition of Cofactors.",
+  "body": " Formal Definition of Cofactors   Given an matrix , let be the matrix obtained by deleting the th row and the th column of . Then the cofactor is    "
+},
+{
+  "id": "sec31-CofactorExpansion-19",
+  "level": "2",
+  "url": "sec31-CofactorExpansion.html#sec31-CofactorExpansion-19",
+  "type": "Note",
+  "number": "3.1.5",
+  "title": "Some special Formulas to Find the Determinants.",
+  "body": " Some special Formulas to Find the Determinants  While the cofactor expansion is the \"formal' way to compute the determinant of a matrix, there are some special formulas that can be used to compute the determinants.  We have been using the special formula to find the determinant of a matrix all the time. That is, You can verify this formula by using the cofactor expansion method to compute the determinant of a matrix.  There is also a special formula for the determinant of a matrix. That is, let . Then Hmm but how can we memorize such a complicated formula...  There is a procedure that leads to this formula. This is usually the way Richard recommended his MTH 254 students (as opposed to memorizing the complicated formula).  Here are the steps to compute the determinant of a 3x3 matrix using the lattice method:   Write down the 3x3 matrix and then duplicate the first two columns to the right of the matrix.    Draw diagonals from the top left to bottom right and multiply the three numbers on each diagonal. Then add these products together.    Next, draw diagonals from the top right to bottom left and multiply the three numbers on each diagonal. Then add these products together.    Finally, subtract the sum from step 3 from the sum from step 2 to get the determinant.     Below is a more visual representation of the steps above:    Lattice Method to calculate the determinant of a 3x3 matrix   Again, this procedure is only for matrices !!  "
+},
+{
+  "id": "sec31-CofactorExpansion-20",
+  "level": "2",
+  "url": "sec31-CofactorExpansion.html#sec31-CofactorExpansion-20",
+  "type": "Example",
+  "number": "3.1.7",
+  "title": "",
+  "body": " Let's compute the determinant of a matrix   We will need to pick a row\/column to begin. Observe that Column 2 has the most zeros in it, so let's pick that one! So we need to compute these two determinants: by picking Row 3 to expand on, and by picking Row 1 to expand on.  So   "
+},
+{
+  "id": "sec31-CofactorExpansion-22",
+  "level": "2",
+  "url": "sec31-CofactorExpansion.html#sec31-CofactorExpansion-22",
+  "type": "Checkpoint",
+  "number": "3.1.8",
+  "title": "",
+  "body": " Compute the determinant of    Observe that Column 3 has three zeros! So let's expand on it! So Let's use Row 2 to compute the determinant we need: So    "
+},
+{
+  "id": "thm-RowOperations-Determinants",
+  "level": "2",
+  "url": "sec31-CofactorExpansion.html#thm-RowOperations-Determinants",
+  "type": "Theorem",
+  "number": "3.1.9",
+  "title": "Row Operations and Determinants.",
+  "body": " Row Operations and Determinants   Let be an matrix. Then   If the matrix has a row or column of zeros its determinant is zero.    If two rows of a matrix are swapped, the sign of the determinant is changed.    If a row (or column) of a matrix is multiplied by a constant, the resulting matrix will have a determinant that is a product of the original determinant and that same constant.    If two rows (or columns) of a matrix are identical, then the determinant of the matrix is zero.    If a multiple of one row of a matrix is added to another row, the determinant of the matrix is unchanged!      "
+},
+{
+  "id": "sec31-CofactorExpansion-26",
+  "level": "2",
+  "url": "sec31-CofactorExpansion.html#sec31-CofactorExpansion-26",
+  "type": "Note",
+  "number": "3.1.10",
+  "title": "But Richard... Why are these things true?",
+  "body": " But Richard... Why are these things true?  Below are the explanations for each of the statement. Some of them are straightforward and some are tricky. Feel free to click open the ones you are super curious about! You are under no obligation to memorize them or anything!   Explaining the First Statement...  If you used the cofactor method and expanded along the row or column that is all zero, then every cofactor would be multiplied by zero, giving you the answer of zero.    Explaining the Second Statement...  Let's consider rows only (the argument is similar for columns).  In the cases, we can see that while so the answers have opposite sides.  Now if the matrix is bigger than , we can calculate the determinant of both of them using the cofactor method and expanding on a row other than the two that are swapped .   In both calculations, the number each cofactor is multiplied by is unchanged (since we are using the same row in each case).  But for each cofactor calculation, we are computing a determinants. When we compute the ones for the matrix with the swapped rows, we get opposite signs because the rows of each matrix have been swapped.   This is what it would look like when the 1st and 3rd rows are swapped for a matrix: and Notice that all of the determinants in the second version will have opposite signs of the ones in the first version.  For a matrix, we can use the same trick. Again, all of the cofactors will change sign. And so on...   Note: This idea can be turned into a formal proof using the Principal of Mathematical Induction.    Explaining the Third Statement...  This one is straightforward. If we expand on the row\/column that has been multiplied by a constant, none of the cofactors will change. But in the calculation we will get an extra factor in each term since each entry of the row\/column is multiplied by the constant. We can just factor out that constant to see that the determinant has been multiplied by that constant.  Here is what it looks like in the case if we multiply the middle row by : and     Explaining the Fourth Statement...  This is a fun one! Imagine swapping the two rows (or columns) that are identical. By the second statement , the determinant will change signs if we do this.  BUT since the two rows (or columns) are identical, switching the rows (or columns) won't change the matrix at all. So the determinant can't change!  What is the only number that we can multiplied by without changing it? ZERO!     Explaining the Fifth Statement...  This is the trickiest and the most important statement! Let's look at the general case and try to figure out why doing this operation does not change the determinant.  Here is the calculation of the \"before\" matrix, expanding on Row 2: Now let's see what happens if we multiply Row 1 by and add that to Row 2 (we will expand using Row 2 again): Observe that So this part will become since Row 1 and Row 2 are identical. This tells us that See the determinant is the same as the determinant of the general matrix!   "
+},
+{
+  "id": "sec31-CofactorExpansion-30",
+  "level": "2",
+  "url": "sec31-CofactorExpansion.html#sec31-CofactorExpansion-30",
+  "type": "Example",
+  "number": "3.1.11",
+  "title": "",
+  "body": " Let's compute   Step 1: We can add times Row 1 to Row 2 (and replace Row 2). This will not change the determinant.   Step 2: We can add times Row 1 to Row 3 (and replace Row 3). And this again will not change the determinant.   Step 3: We can add Row 2 to Row 4 (and replace Row 4), and the determinant is still unchanged.   Step 4: We can add times Row 3 to Row 4 without changing the determinant!   Notice that we now have all zeros below the main diagonal. At this point, Richard instantly knows that the determinant is going to be . How does he know that?  Watch what happens when we expand along the last row to compute the determinant: Now we need to figure out the determinant of one matrix that also has all zeros below the main diagonal. So... And now we need to figure out the determinant of one matrix that also has all zeros below the main diagonal (well there is only one spot there, but still!). Continuing then, we get...   So it turned out that the answer was just the product of the entries on the diagonal !  "
+},
+{
+  "id": "sec31-CofactorExpansion-32",
+  "level": "2",
+  "url": "sec31-CofactorExpansion.html#sec31-CofactorExpansion-32",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "upper triangle lower triangular "
+},
+{
+  "id": "sec31-CofactorExpansion-33",
+  "level": "2",
+  "url": "sec31-CofactorExpansion.html#sec31-CofactorExpansion-33",
+  "type": "Checkpoint",
+  "number": "3.1.12",
+  "title": "",
+  "body": " Use this new row-reduction method to compute the determinant of    We will add Row 1 tp Row 2, times Row 1 to Row 3, and times Row 1 to Row 4. We get: Now we will add times Row 2 to Row 3, and times Row 2 to Row 4. We get: Now we have an upper triangular matrix and can see that .   "
+},
+{
+  "id": "sec31-CofactorExpansion-34",
+  "level": "2",
+  "url": "sec31-CofactorExpansion.html#sec31-CofactorExpansion-34",
+  "type": "Checkpoint",
+  "number": "3.1.13",
+  "title": "",
+  "body": " What is the determinant of the identity matrix (of any size)?   Identity matrix (of any size) is an upper triangular matrix with 's on the main diagonal (It is also a lower triangular matrix!). Hence the determinant is .   "
+},
+{
+  "id": "sec32-DeterminantsInverse",
+  "level": "1",
+  "url": "sec32-DeterminantsInverse.html",
+  "type": "Section",
+  "number": "3.2",
+  "title": "Determinants and Matrix Inverses",
+  "body": " Determinants and Matrix Inverses   In this section, we will explore some key theorems relating to the determinants. Additionally, we will use cofactors to define the adjugate of a matrix, which allows us to build a general formula for matrix inverses and introduces a new method for solving linear systems known as Cramer's Rule.    After this section, students will be able to:     apply the multiplicative property of determinants    determine whether a matrix is invertible by computing its determinant    relate the determinant of a matrix to the determinant of its transpose and its inverse    find the adjugate of a matrix and use it to compute a matrix inverse    solve a system of linear equations using Cramer's Rule       Important Theorems about Determinants  The most important theorem about determinants is this one:   Determinants and Products   Suppose and are matrices. Then That is, the determinant of the product is the product of the determinants.    And one consequence of this is the following Lemma:    Let be an matrix, then if and only if has no inverse (hence is not invertible).     We know that We can calculate the determinant of all three matrices and quickly verify that    If we know that is invertible, then we can use the above theorem to compute the determinant of the inverse of . Since , we have Hence, . We can make it a theorem!   Determinants and Inverses   Let be an  invertible matrix. Then     The next theorem tells us about the determinants and transpose.   Determinants and Transpose   Let be an matrix. Then     What the theorem tells us is that the determinant of any square matrix is the same as the determinant of its transpose.   Proof using Elementary Matrices...  First, let's make sure this is true for elementary matrices.   If is obtained by swapping two rows on , then is obtained by swapping the corresponding columns of . In each case, the determinant is .    If is obtained by multiplying a row of by a constant, then notice that . So certainly and have the same determinant in this case (it is whatever the constant is).    If is obtained by adding a multiple of a row of to another row of . The transpose could be obtained the same way (reversing the two rows). Or we we could do it by doing the same operation on the corresponding columns of . In any case, the determinant of and are both because those operations do not change the determinant of .   So the result holds for elementary matrices.  Now let's do the proof for any matrix .  If is not invertible, then neither is .  Hmm why is that?  If , then . So we would have an inverse for if we had one for .  So if , then as well.  Suppose , then is invertible and can be written as a product of elementary matrices. Let's say Then by this theorem , we know that Therefore,     Proof Idea using Mathematical Induction...  This proof (idea) is easier but uses a proof technique most MTH 261 students would not be familiar with called Mathematical Induction .  The idea in this case is that the theory is easily verified for matrices:   If , we can see that Since , we can verify that Same thing.   Now suppose we were working with a matrix. Then the first row of becomes the first column of . So if we calculate the determinant using the cofactor method and expand on the first row of and the first column of , we will see that we get the same thing except each of the little determinants has been transposed when we are working with . And since we know from the case that these are the same, it follows that we get the same answer for and in the case as well.  Then we can repeat that same strategy for and so on and so on forever and ever...     Applications using Determinants   Note: You will not be assessed on this subsection. This is more like \"fyi we can use the determinant to do these things!\"   Recall that we learned a formula to find the inverse of a matrix using the determinant and the adjugate of a matrix. Assuming , the inverse formula is Now that we know how to compute the determinant of a matrix, can we come up with a similar formula to find the inverse of such a matrix?  It all comes down to the adjugate! Now that we have learned about cofactors, we can learn how to form adjugates of larger matrices and then use those to find inverses of larger matrices.   Adjugate of a Matrix   Let be a square matrix. The adjugate of , denoted as , is the transpose of its cofactor matrix.    We learned about cofactors in the previous section ( ). The cofactor matrix of a matrix is just a matrix whose entry is the cofactor of .   Reminder: To calculate the cofactor of a matrix entry, we cross out the row and column of that entry and compute the determinant of the smaller matrix we get. Then multiply by the corresponding sign in the sign matrix.   The adjugate of is just the transpose of the cofactor matrix!    Let's first verify that this will give us the same answer for the adjugate of a matrix as the original formula from back in the day!  Let . Then our cofactors are: Hence, our cofactor matrix of is . Now we can form the adjugate by taking the transpose of the cofactor matrix! See! This matches up with the adjugate in our formula!   Let's find the inverse of an actual matrix using this inverse formula to make sure we have a good grasp on how this formula works!   Find the inverse of the matrix using the inverse formula.   P.S.: This is a matrix specially designed to not be terrible when using the inverse formula!   To use the inverse formula, we will start by computing all the cofactors. We will need them to find make the adjugate. So our cofactor matrix is . This means that the adjugate is Also, observe that is an upper triangular matrix, so So the inverse of is    With this method, we can come up with the inverse formula for a matrix using this method. We will just need to find the determinant and the adjugate of a generic matrix!   Let's derive the inverse formula for a generic matrix !  First, we calculate the determinant (let's just expand on the first row)   Next, we find the adjugate by computing the cofactors of .   Recall the adjugate is just the transpose of the cofactor matrix. That is,   Finally, we assume that , the inverse is given by the formula  Just snap each components to the right place... This is a super complicated formula...    You may get the idea that this is not a particularly efficient way to find the inverse of a matrix! Sometimes if there are enough zeros, it works out okay... But it is generally much more efficient to use the Gaussian elimination method we learned in the last section!  One reason why this formula exists is because it can be used to prove Cramer's Rule , which gives a way to compute the solution to a system of equations...   Cramer's Rule   Let be an invertible matrix. The solution to the equation is where is the matrix obtained by replacing the th column of with .     Let's solve the following system of linear equations using Cramer's rule. Observe that and   We can compute the determinant of and .  Next, we create , and by replacing the respective columns of with . Then we can also compute their respective determinants. Hence, the solution to the system, by Cramer's rule is    This is also not an efficient way to do things... It's usefulness (like the inverse formula) comes from helping to prove other theorems.  But why does the rule make sense? If you are interested, click open the expandable box and walk through some steps that basically explain why it works.   Let's first do the to help visualize the rule and verify that case!  Consider the system In this case, . So we know that . That means that if we solve it using the formula by this .  Let's follow Cramer's Rule and see if we will get the same thing! We know that can be obtained by replacing the first column of with , so we get Then .  Similarly, and .  If we multiply each of these by , we get the solutions and matching up perfectly from our method!  So in general, we can verify that Cramer's Rule works by the following steps:   Write down the answer we would get for if we calculate it by multiplying , where we expressed using the inverse formula (the one with the adjugate). Leave out the part to make it less messy to compare things!     Write down what we would get for for each using the cofactor expansion (expanding on the column you replaced with ). Compare this to fro the previous step and see that it is the same!       "
+},
+{
+  "id": "sec32-DeterminantsInverse-2-2",
+  "level": "2",
+  "url": "sec32-DeterminantsInverse.html#sec32-DeterminantsInverse-2-2",
+  "type": "Objectives",
+  "number": "3.2",
+  "title": "",
+  "body": "  After this section, students will be able to:     apply the multiplicative property of determinants    determine whether a matrix is invertible by computing its determinant    relate the determinant of a matrix to the determinant of its transpose and its inverse    find the adjugate of a matrix and use it to compute a matrix inverse    solve a system of linear equations using Cramer's Rule    "
+},
+{
+  "id": "thm-DeterminantsProducts",
+  "level": "2",
+  "url": "sec32-DeterminantsInverse.html#thm-DeterminantsProducts",
+  "type": "Theorem",
+  "number": "3.2.1",
+  "title": "Determinants and Products.",
+  "body": " Determinants and Products   Suppose and are matrices. Then That is, the determinant of the product is the product of the determinants.   "
+},
+{
+  "id": "lem-DeterminantsInverses",
+  "level": "2",
+  "url": "sec32-DeterminantsInverse.html#lem-DeterminantsInverses",
+  "type": "Lemma",
+  "number": "3.2.2",
+  "title": "",
+  "body": "  Let be an matrix, then if and only if has no inverse (hence is not invertible).   "
+},
+{
+  "id": "subsec-Theorems-Determinants-6",
+  "level": "2",
+  "url": "sec32-DeterminantsInverse.html#subsec-Theorems-Determinants-6",
+  "type": "Example",
+  "number": "3.2.3",
+  "title": "",
+  "body": " We know that We can calculate the determinant of all three matrices and quickly verify that   "
+},
+{
+  "id": "thm-InverseDeterminant",
+  "level": "2",
+  "url": "sec32-DeterminantsInverse.html#thm-InverseDeterminant",
+  "type": "Theorem",
+  "number": "3.2.4",
+  "title": "Determinants and Inverses.",
+  "body": " Determinants and Inverses   Let be an  invertible matrix. Then    "
+},
+{
+  "id": "thm-TransposeDeterminant",
+  "level": "2",
+  "url": "sec32-DeterminantsInverse.html#thm-TransposeDeterminant",
+  "type": "Theorem",
+  "number": "3.2.5",
+  "title": "Determinants and Transpose.",
+  "body": " Determinants and Transpose   Let be an matrix. Then    "
+},
+{
+  "id": "subsec-Theorems-Determinants-12",
+  "level": "2",
+  "url": "sec32-DeterminantsInverse.html#subsec-Theorems-Determinants-12",
+  "type": "Proof",
+  "number": "1",
+  "title": "Proof using Elementary Matrices....",
+  "body": " Proof using Elementary Matrices...  First, let's make sure this is true for elementary matrices.   If is obtained by swapping two rows on , then is obtained by swapping the corresponding columns of . In each case, the determinant is .    If is obtained by multiplying a row of by a constant, then notice that . So certainly and have the same determinant in this case (it is whatever the constant is).    If is obtained by adding a multiple of a row of to another row of . The transpose could be obtained the same way (reversing the two rows). Or we we could do it by doing the same operation on the corresponding columns of . In any case, the determinant of and are both because those operations do not change the determinant of .   So the result holds for elementary matrices.  Now let's do the proof for any matrix .  If is not invertible, then neither is .  Hmm why is that?  If , then . So we would have an inverse for if we had one for .  So if , then as well.  Suppose , then is invertible and can be written as a product of elementary matrices. Let's say Then by this theorem , we know that Therefore,   "
+},
+{
+  "id": "subsec-Theorems-Determinants-13",
+  "level": "2",
+  "url": "sec32-DeterminantsInverse.html#subsec-Theorems-Determinants-13",
+  "type": "Proof",
+  "number": "2",
+  "title": "Proof Idea using Mathematical Induction....",
+  "body": " Proof Idea using Mathematical Induction...  This proof (idea) is easier but uses a proof technique most MTH 261 students would not be familiar with called Mathematical Induction .  The idea in this case is that the theory is easily verified for matrices:   If , we can see that Since , we can verify that Same thing.   Now suppose we were working with a matrix. Then the first row of becomes the first column of . So if we calculate the determinant using the cofactor method and expand on the first row of and the first column of , we will see that we get the same thing except each of the little determinants has been transposed when we are working with . And since we know from the case that these are the same, it follows that we get the same answer for and in the case as well.  Then we can repeat that same strategy for and so on and so on forever and ever...  "
+},
+{
+  "id": "def-Adjugate",
+  "level": "2",
+  "url": "sec32-DeterminantsInverse.html#def-Adjugate",
+  "type": "Definition",
+  "number": "3.2.7",
+  "title": "Adjugate of a Matrix.",
+  "body": " Adjugate of a Matrix   Let be a square matrix. The adjugate of , denoted as , is the transpose of its cofactor matrix.   "
+},
+{
+  "id": "subsec-Applications_Determinants-9",
+  "level": "2",
+  "url": "sec32-DeterminantsInverse.html#subsec-Applications_Determinants-9",
+  "type": "Example",
+  "number": "3.2.8",
+  "title": "",
+  "body": " Let's first verify that this will give us the same answer for the adjugate of a matrix as the original formula from back in the day!  Let . Then our cofactors are: Hence, our cofactor matrix of is . Now we can form the adjugate by taking the transpose of the cofactor matrix! See! This matches up with the adjugate in our formula!  "
+},
+{
+  "id": "subsec-Applications_Determinants-11",
+  "level": "2",
+  "url": "sec32-DeterminantsInverse.html#subsec-Applications_Determinants-11",
+  "type": "Example",
+  "number": "3.2.9",
+  "title": "",
+  "body": " Find the inverse of the matrix using the inverse formula.   P.S.: This is a matrix specially designed to not be terrible when using the inverse formula!   To use the inverse formula, we will start by computing all the cofactors. We will need them to find make the adjugate. So our cofactor matrix is . This means that the adjugate is Also, observe that is an upper triangular matrix, so So the inverse of is   "
+},
+{
+  "id": "subsec-Applications_Determinants-13",
+  "level": "2",
+  "url": "sec32-DeterminantsInverse.html#subsec-Applications_Determinants-13",
+  "type": "Example",
+  "number": "3.2.10",
+  "title": "",
+  "body": " Let's derive the inverse formula for a generic matrix !  First, we calculate the determinant (let's just expand on the first row)   Next, we find the adjugate by computing the cofactors of .   Recall the adjugate is just the transpose of the cofactor matrix. That is,   Finally, we assume that , the inverse is given by the formula  Just snap each components to the right place... This is a super complicated formula...   "
+},
+{
+  "id": "thm-CramerRule",
+  "level": "2",
+  "url": "sec32-DeterminantsInverse.html#thm-CramerRule",
+  "type": "Theorem",
+  "number": "3.2.11",
+  "title": "Cramer’s Rule.",
+  "body": " Cramer's Rule   Let be an invertible matrix. The solution to the equation is where is the matrix obtained by replacing the th column of with .   "
+},
+{
+  "id": "subsec-Applications_Determinants-17",
+  "level": "2",
+  "url": "sec32-DeterminantsInverse.html#subsec-Applications_Determinants-17",
+  "type": "Example",
+  "number": "3.2.12",
+  "title": "",
+  "body": " Let's solve the following system of linear equations using Cramer's rule. Observe that and   We can compute the determinant of and .  Next, we create , and by replacing the respective columns of with . Then we can also compute their respective determinants. Hence, the solution to the system, by Cramer's rule is   "
+},
+{
+  "id": "subsec-Applications_Determinants-20",
+  "level": "2",
+  "url": "sec32-DeterminantsInverse.html#subsec-Applications_Determinants-20",
+  "type": "Proof",
+  "number": "1",
+  "title": "",
+  "body": " Let's first do the to help visualize the rule and verify that case!  Consider the system In this case, . So we know that . That means that if we solve it using the formula by this .  Let's follow Cramer's Rule and see if we will get the same thing! We know that can be obtained by replacing the first column of with , so we get Then .  Similarly, and .  If we multiply each of these by , we get the solutions and matching up perfectly from our method!  So in general, we can verify that Cramer's Rule works by the following steps:   Write down the answer we would get for if we calculate it by multiplying , where we expressed using the inverse formula (the one with the adjugate). Leave out the part to make it less messy to compare things!     Write down what we would get for for each using the cofactor expansion (expanding on the column you replaced with ). Compare this to fro the previous step and see that it is the same!     "
+},
+{
+  "id": "sec33-EigenvaluesEigenvectors",
+  "level": "1",
+  "url": "sec33-EigenvaluesEigenvectors.html",
+  "type": "Section",
+  "number": "3.3",
+  "title": "Eigenvalues and Eigenvectors",
+  "body": " Eigenvalues and Eigenvectors    Suppose and be a linear transformation defined by .    Let . Compute , and then sketch the vectors and . What is their relationship?    Let . Compute , and then sketch the vectors and . What is their relationship?    In the previous investigation, we found that and are parallel, which allows us to express as a scalar multiple of the preimage . Observe that matrix-vector multiplication is hard. But scalar multiplication of a vector is much easier. This is the idea behind eigenvalues and eigenvectors , which allows us to turn a matrix-vector multiplication to a scalar multiplication!   Eigenvalues and Eigenvectors   Let be an matrix. An eigenvector of is a nonzero vector such that for some scalar . Such a scalar is called an eigenvalue of .  We call here an eigenvector corresponding to the eigenvalue .     But Richard... Why can't we allow the zero vector to be an eigenvector?  Great question! Let's do a quick experiment by allowing the zero vector to be an eigenvector.  If is an eigenvector of some square matrix , then we have for some scalar .   Then what are the eigenvalues of this matrix ?   The answer is every scalar ! This is because the equation is always true regardless of the value of (we ended up getting ). Then why bother defining the concept of eigenvalues of a matrix if every scalar is an eigenvalue?  Observe that allowing the zero vector to be an eigenvector will trivialize the concept of eigenvalues. So we exclude the zero vector from being an eigenvector.   The goal of this section is to be able to find the eigenvalues and its corresponding eigenvectors of a matrix. Let's do some verification, and then we will summarize the process that can be applied to any square matrix.   Let . Is an eigenvector of ?  Based on the definition, an eigenvector can turn a matrix-vector multiplication into a scalar multiplication. So let's compute and see if we can express it as a scalar multiple of .  Observe that So we can express this matrix-vector multiplication as scaling the vector by a factor of . Hence, is an eigenvector of , and the corresponding eigenvalue is .  What about ? Is also an eigenvector of ?  Let's do the same thing as before by computing and see if we can express it as a scalar multiple of : Since is not a scalar multiple of , the vector is not an eigenvector of .  Richard claims that an eigenvalue of is . How can we verify this claim?  If , then we can plug this value into the equation and be able to find the corresponding eigenvectors. So let's first plug in into the equation : We can assume and rewrite the equation as This is equivalent to the system of equations Now we can solve this system of equations using augmented matrices: Converting this matrix to row echelon form, we have This implies that and is a free variable. Hence, the corresponding eigenvectors are of the form for any real number of .   Suppose is an eigenvector of . Then must be a solution to the equation for some scalar . If we do some quick algebraic manipulation, we can obtain the following equation Observe that is a common factor of the left-hand side, so we can factor it out and rewrite the equation as Hmm... But this equation doesn't quick make sense... What is \" \"? That is, how can we subtract a scalar from a matrix?  From the previous example, we saw that is an eigenvalue of , and we ended up subtracting from the diagonal entries of . So instead of writing , which makes no sense, we can rewrite it as , where is the identity matrix. Hence, we can rewrite the equation as Now the equation makes sense! This is just a homogeneous equation so the solution (aka the eigenvectors) is captured by the null space of the matrix . Finding the eigenvectors of a matrix corresponding to a matrix is equivalent to finding the null space of the matrix .    Be careful! Recall that we don't allow the zero vector to be an eigenvector. Hence, we want to find the non-trivial solutions to the equation .   Let . An eigenvalue of this matrix is . Let's find the corresponding eigenvectors!  Essentially we want to find the non-trivial solutions to the equation . So let's find the matrix first: Now we can find the null space of the matrix by solving the homogeneous equation using the augmented matrix: Observe that and are free variables, and . Then we can express the solution, in parametric form, as Then the corresponding eigenvectors are of the form for any real numbers of and , except for the case when both and are zero.   Observe that all the eigenvectors corresponding to a specific eigenvalue of a matrix will live in , which is a subspace. Then we can define eigenspace as the null space of the matrix .   Eigenspace   Let be an matrix, and let be an eigenvalue of . The eigenspace of corresponding to the eigenvalue , denoted by , is the null space of the matrix . Symbolically speaking,     It is correct to say that the eigenspace includes all the eigenvectors corresponding to the eigenvalue of a matrix, but it is incorrect to say that everything in the eigenspace is an eigenvector. Remember that the zero vector is always in the subspace, but it is not an eigenvector. So eigenspace is essentially the set of all eigenvectors corresponding to a specific eigenvalue of a matrix, together with the zero vector.   Back to our previous example of with an eigenvalue of , we can find its eigenspace .  We did all the heavy-lifting work in the previous example by solving the homogeneous equation , with the solution, in parametric form, as Then the eigenspace , aka , is the span of those two basis vectors. That is,    Now that we know how to find the eigenvectors corresponding to a specific eigenvalue, the next question is: How do we find the eigenvalues of a matrix?   We can find the eigenvalues of a matrix by, again, observing this equation Recall that eigenvectors are non-trivial solutions to this homogeneous equation, so this equation must have infinitely many solutions. That is, the matrix must be singular (not invertible).  We can say a lot about a non-invertible matrix. The fact that will be super useful to us is that a matrix is non-invertible if and only if its determinant is zero. So we can find all eigenvalues of a matrix by solving the equation .    Let and we want to find all the eigenvalues of this matrix.  Let be an eigenvalue of . Then we want the matrix be non-invertible to guarantee non-trivial solutions to the equation . That is, we want the values such that .  Let's start by computing the determinant of the matrix : This is essentially a quadratic equation in terms of and we can totally solve it! Factoring the quadratic, we have Hence, the eigenvalues of the matrix are and .    Find the eigenvalues of the matrix .   Since the equation captures the characteristics of the matrix that this matrix must be non-invertible, we call this equation the characteristic equation of the matrix .   Characteristic Equations   Let be an matrix. The equation is called the characteristic equation of the matrix . A scalar is an eigenvalue of if and only if it is a solution to the characteristic equation of .  The characteristic equation will always be a polynomial equation, so is called the characteristic polynomial of the matrix .    In practice, finding the eigenvalues of an matrix results in solving a polynomial equation of degree . This is almost always difficult as gets larger. So we will leave this to computers, except in the case and some easy cases.   Let . What are the eigenvalues of this matrix?  We can find the eigenvalues by solving the characteristic equation , so let's start by computing the determinant of the matrix : Since is already factored, we can easily solve the characteristic equation and find the eigenvalues: Hence, the eigenvalues of the matrix are and .   "
+},
+{
+  "id": "sec33-EigenvaluesEigenvectors-2",
+  "level": "2",
+  "url": "sec33-EigenvaluesEigenvectors.html#sec33-EigenvaluesEigenvectors-2",
+  "type": "Investigation",
+  "number": "3.3.1",
+  "title": "",
+  "body": "  Suppose and be a linear transformation defined by .    Let . Compute , and then sketch the vectors and . What is their relationship?    Let . Compute , and then sketch the vectors and . What is their relationship?   "
+},
+{
+  "id": "sec33-EigenvaluesEigenvectors-3",
+  "level": "2",
+  "url": "sec33-EigenvaluesEigenvectors.html#sec33-EigenvaluesEigenvectors-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "eigenvalues eigenvectors "
+},
+{
+  "id": "def-EigenvaluesEigenvectors",
+  "level": "2",
+  "url": "sec33-EigenvaluesEigenvectors.html#def-EigenvaluesEigenvectors",
+  "type": "Definition",
+  "number": "3.3.2",
+  "title": "Eigenvalues and Eigenvectors.",
+  "body": " Eigenvalues and Eigenvectors   Let be an matrix. An eigenvector of is a nonzero vector such that for some scalar . Such a scalar is called an eigenvalue of .  We call here an eigenvector corresponding to the eigenvalue .   "
+},
+{
+  "id": "sec33-EigenvaluesEigenvectors-5",
+  "level": "2",
+  "url": "sec33-EigenvaluesEigenvectors.html#sec33-EigenvaluesEigenvectors-5",
+  "type": "Note",
+  "number": "3.3.3",
+  "title": "But Richard... Why can’t we allow the zero vector to be an eigenvector?",
+  "body": " But Richard... Why can't we allow the zero vector to be an eigenvector?  Great question! Let's do a quick experiment by allowing the zero vector to be an eigenvector.  If is an eigenvector of some square matrix , then we have for some scalar .   Then what are the eigenvalues of this matrix ?   The answer is every scalar ! This is because the equation is always true regardless of the value of (we ended up getting ). Then why bother defining the concept of eigenvalues of a matrix if every scalar is an eigenvalue?  Observe that allowing the zero vector to be an eigenvector will trivialize the concept of eigenvalues. So we exclude the zero vector from being an eigenvector.  "
+},
+{
+  "id": "sec33-EigenvaluesEigenvectors-7",
+  "level": "2",
+  "url": "sec33-EigenvaluesEigenvectors.html#sec33-EigenvaluesEigenvectors-7",
+  "type": "Example",
+  "number": "3.3.4",
+  "title": "",
+  "body": " Let . Is an eigenvector of ?  Based on the definition, an eigenvector can turn a matrix-vector multiplication into a scalar multiplication. So let's compute and see if we can express it as a scalar multiple of .  Observe that So we can express this matrix-vector multiplication as scaling the vector by a factor of . Hence, is an eigenvector of , and the corresponding eigenvalue is .  What about ? Is also an eigenvector of ?  Let's do the same thing as before by computing and see if we can express it as a scalar multiple of : Since is not a scalar multiple of , the vector is not an eigenvector of .  Richard claims that an eigenvalue of is . How can we verify this claim?  If , then we can plug this value into the equation and be able to find the corresponding eigenvectors. So let's first plug in into the equation : We can assume and rewrite the equation as This is equivalent to the system of equations Now we can solve this system of equations using augmented matrices: Converting this matrix to row echelon form, we have This implies that and is a free variable. Hence, the corresponding eigenvectors are of the form for any real number of .  "
+},
+{
+  "id": "sec33-EigenvaluesEigenvectors-11",
+  "level": "2",
+  "url": "sec33-EigenvaluesEigenvectors.html#sec33-EigenvaluesEigenvectors-11",
+  "type": "Example",
+  "number": "3.3.5",
+  "title": "",
+  "body": " Let . An eigenvalue of this matrix is . Let's find the corresponding eigenvectors!  Essentially we want to find the non-trivial solutions to the equation . So let's find the matrix first: Now we can find the null space of the matrix by solving the homogeneous equation using the augmented matrix: Observe that and are free variables, and . Then we can express the solution, in parametric form, as Then the corresponding eigenvectors are of the form for any real numbers of and , except for the case when both and are zero.  "
+},
+{
+  "id": "sec33-EigenvaluesEigenvectors-12",
+  "level": "2",
+  "url": "sec33-EigenvaluesEigenvectors.html#sec33-EigenvaluesEigenvectors-12",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "eigenspace "
+},
+{
+  "id": "def-Eigenspace",
+  "level": "2",
+  "url": "sec33-EigenvaluesEigenvectors.html#def-Eigenspace",
+  "type": "Definition",
+  "number": "3.3.6",
+  "title": "Eigenspace.",
+  "body": " Eigenspace   Let be an matrix, and let be an eigenvalue of . The eigenspace of corresponding to the eigenvalue , denoted by , is the null space of the matrix . Symbolically speaking,    "
+},
+{
+  "id": "sec33-EigenvaluesEigenvectors-15",
+  "level": "2",
+  "url": "sec33-EigenvaluesEigenvectors.html#sec33-EigenvaluesEigenvectors-15",
+  "type": "Example",
+  "number": "3.3.7",
+  "title": "",
+  "body": " Back to our previous example of with an eigenvalue of , we can find its eigenspace .  We did all the heavy-lifting work in the previous example by solving the homogeneous equation , with the solution, in parametric form, as Then the eigenspace , aka , is the span of those two basis vectors. That is,   "
+},
+{
+  "id": "sec33-EigenvaluesEigenvectors-19",
+  "level": "2",
+  "url": "sec33-EigenvaluesEigenvectors.html#sec33-EigenvaluesEigenvectors-19",
+  "type": "Example",
+  "number": "3.3.8",
+  "title": "",
+  "body": " Let and we want to find all the eigenvalues of this matrix.  Let be an eigenvalue of . Then we want the matrix be non-invertible to guarantee non-trivial solutions to the equation . That is, we want the values such that .  Let's start by computing the determinant of the matrix : This is essentially a quadratic equation in terms of and we can totally solve it! Factoring the quadratic, we have Hence, the eigenvalues of the matrix are and .  "
+},
+{
+  "id": "sec33-EigenvaluesEigenvectors-20",
+  "level": "2",
+  "url": "sec33-EigenvaluesEigenvectors.html#sec33-EigenvaluesEigenvectors-20",
+  "type": "Checkpoint",
+  "number": "3.3.9",
+  "title": "",
+  "body": " Find the eigenvalues of the matrix .  "
+},
+{
+  "id": "sec33-EigenvaluesEigenvectors-21",
+  "level": "2",
+  "url": "sec33-EigenvaluesEigenvectors.html#sec33-EigenvaluesEigenvectors-21",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "characteristic equation "
+},
+{
+  "id": "def-CharacteristicEquation",
+  "level": "2",
+  "url": "sec33-EigenvaluesEigenvectors.html#def-CharacteristicEquation",
+  "type": "Definition",
+  "number": "3.3.10",
+  "title": "Characteristic Equations.",
+  "body": " Characteristic Equations   Let be an matrix. The equation is called the characteristic equation of the matrix . A scalar is an eigenvalue of if and only if it is a solution to the characteristic equation of .  The characteristic equation will always be a polynomial equation, so is called the characteristic polynomial of the matrix .   "
+},
+{
+  "id": "sec33-EigenvaluesEigenvectors-24",
+  "level": "2",
+  "url": "sec33-EigenvaluesEigenvectors.html#sec33-EigenvaluesEigenvectors-24",
+  "type": "Example",
+  "number": "3.3.11",
+  "title": "",
+  "body": " Let . What are the eigenvalues of this matrix?  We can find the eigenvalues by solving the characteristic equation , so let's start by computing the determinant of the matrix : Since is already factored, we can easily solve the characteristic equation and find the eigenvalues: Hence, the eigenvalues of the matrix are and .  "
+},
+{
+  "id": "sec34-Diagonalization",
+  "level": "1",
+  "url": "sec34-Diagonalization.html",
+  "type": "Section",
+  "number": "3.4",
+  "title": "Diagonalization",
+  "body": " Diagonalization    Let and .    Find if this is easy to compute. If not, explain why not (and then table it).    Find if this is easy to compute. If not, explain why not (and then table it).     Diagonal Matrices   A diagonal matrix is a square matrix in which all elements outside the main diagonal are zero.    Diagonal matrices are super nice to work with because   It is easy to find their determinants (just multiply the diagonal entries).    It is easy to find their inverses (just take the reciprocals of the diagonal entries).    We can see immediately what they do to the standard basis vectors (just scale them by the diagonal entries).    It is easy to compute the powers of them (just take the powers of the diagonal entries).   So the goal of this section is to diagonalize a square matrix (if possible). That is, we want to find a diagonal matrix that is similar to a given matrix.   Similar Matrices   Let and be matrices. Then is similar to if there exists an invertible matrix such that     If you end up studying advanced linear algebra, what is really going on here is that the columns of the matrix represent an alternative basis of . If you use that basis instead of the standard basis, the matrix for the corresponding linear transformation actually would be diagonal. This alternative basis is actually made up of eigenvectors and that is what we are going to learn about how.  As far as what this class (MTH 261) concerns, we will focus on the fact that if a matrix is similar to a diagonal matrix, then it is still easy to compute powers if we can figure out what the , , and are.  But how do similar matrices makes it easier to compute powers? Let's investigate this in the next example.   Recall in the previous example, and . These two matrices are similar because with the matrix .  Let's first verify it! We can first find the inverse of quickly: Then we have So and are indeed similar!  Now let's try to compute by finding first to find any pattern! Observe that If we want to compute , we can do the same thing and find that So we can find as We saw that can be computed easily, so we can compute easily as well by just multiplying three matrices together (as opposed to multiplying by itself 25 times).   Now that we have seen how similar matrices (to diagonal matrices) can help us compute powers of matrices, then the next question is: how can we diagonalize a matrix by finding the similar diagonal matrix and the special matrix ? It turns out that the key is to find the eigenvalues and eigenvectors of the matrix!  The process of diagonalization is listed as follows:  Find the eigenvalues of the matrix.   For each eigenvalue, find the corresponding eigenvectors . A quick way to do so is to grab the basis vectors in the eigenspace.    Construct the special matrix using the eigenvectors as comlumns, so     Construct the diagonal matrix by putting the corresponding eigenvalues of on the diagonal entries, up to its multiplicity.           But Richard... Why on earth do eigenvalues and eigenvectors have to do with diagonalization?  Let's say we have a square matrix . Suppose we let where and are the corresponding eigenvalues and eigenvectors of the matrix . That is, for each . To guarantee that is invertible, the columns of (aka all the eigenvectors) must be linearly independent. That is why we want to just grab the basis vectors of the eigenspace to ensure the invertibility.  Imagine we want to multiply . Then we obtain So we just showed that . Since is invertible, then exists, and we can multiply on the right on both sides of the equation. We obtain So yes! and are similar!    Let . Let's diagonalize this matrix!  We need to find the eigenvalues and its corresponding eigenvectors for the diagonalization. In the last section, we found that the characteristic equation is This implies that the eigenvalues are (with the multiplicity of ) and (with the multiplicity of ). Next, we will find the corresponding eigenvectors of these eigenvalues.  Let's consider the eigenvalue of . Then we want to solve the homogeneous equation . The augmented matrix is Observe that is the free variable, so the solution, in parametric form, is Hence, an eigenvector that spans the eigenspace is .  Next, let's consider the eigenvalue of . Then we want to solve the homogeneous equation . The augmented matrix is Observe that and are the free variables, so the solution, in parametric form, is Hence, the eigenvectors that spans the eigenspace are and .  Now let's put together the diagonal matrix and our special matrix for the diagonalization! Our eigenvalues are and their corresponding basis eigenvectors are Then our diagonal matrix and our special matrix is    This is a good place to call it good for diagonalization since we found and . We can next verify it by making sure is indeed .  We can find by reducing to . Hence, .  Now we can verify that    So to diagonalize a matrix, we just need to find all the eigenvalues and its corresponding basis eigenvectors. Then we put things into the right place in the right order.   Let's diagonalize this matrix .  We want to first find its eigenvalues. That is, we want to solve the characteristic equation . Now we solve the characteristic equation to obtain the eigenvalues of , , and .  Let's consider the eigenvalue of . Then we want to solve the homogeneous equation . The augmented matrix is Observe that is the free variable, so the solution, in parametric form, is To avoid fractions, we can choose . Hence, an eigenvector that spans the eigenspace is .  Next, let's consider the eigenvalue of of . Then we want to solve the homogeneous equation . The augmented matrix is Observe that is the free variable, so the solution, in parametric form, is Hence, an eigenvector that spans the eigenspace is .  Finally, let's consider the eigenvalue of . Then we want to solve the homogeneous equation . The augmented matrix is Observe that is the free variable, so the solution, in parametric form, is Hence, an eigenvector that spans the eigenspace is .  Now we put together the diagonal matrix and our special matrix . Our eigenvalues are and their corresponding basis eigenvectors are Then our diagonal matrix and our special matrix is    Feel free to verify our answer by computing and see if we get out of it.    You may observe that from the previous two examples, the multiplicity of an eigenvalue matches up with the dimension of the eigenspace . This is the condition for a matrix to be diagonalizable. That is, if the multiplicity does not match with the dimension, the matrix is not diagonalizable.   Let's say our matrix and we want to diagonalize it.  We will first find the eigenvalues of . The characteristic polynomial is We can factor the characteristic polynomial as follows: So we can solve the characteristic equation and obtain the eigenvalues of (with the multiplicity of ) and (with the multiplicity of ).   NOTE: Feel free to use technology to help you solve the characteristic equation. Remember that we should obtain the number of solutions matching up with the degree of the equation, including multiplicity, guaranteed by the Fundamental Theorem of Algebra.  Next, let's find the corresponding eigenvectors for these eigenvalues. We will start with . We want to solve the homogeneous equation . The augmented matrix is Observe that is the free variable, so the solution in parametric form is Hence, an eigenvector that spans this eigenspace is .  Now let's consider the eigenvalue . We want to solve the homogeneous equation . The augmented matrix is Observe that is the only free variable. The solution in parametric form is To avoid fractions, we can choose , which gives us the eigenvector that spans the eigenspace.  Wait a minute! We have a problem. For the matrix to be diagonalizable, we need linearly independent eigenvectors to form our invertible matrix . However, the eigenvalue has an algebraic multiplicity of , but its eigenspace is spanned just by one basis vector of ... We don't have enough basis vectors to construct our special matrix ...   Therefore, the matrix is not diagonalizable!    "
+},
+{
+  "id": "sec34-Diagonalization-2",
+  "level": "2",
+  "url": "sec34-Diagonalization.html#sec34-Diagonalization-2",
+  "type": "Investigation",
+  "number": "3.4.1",
+  "title": "",
+  "body": "  Let and .    Find if this is easy to compute. If not, explain why not (and then table it).    Find if this is easy to compute. If not, explain why not (and then table it).   "
+},
+{
+  "id": "def-DiagonalMatrices",
+  "level": "2",
+  "url": "sec34-Diagonalization.html#def-DiagonalMatrices",
+  "type": "Definition",
+  "number": "3.4.2",
+  "title": "Diagonal Matrices.",
+  "body": " Diagonal Matrices   A diagonal matrix is a square matrix in which all elements outside the main diagonal are zero.   "
+},
+{
+  "id": "sec34-Diagonalization-4",
+  "level": "2",
+  "url": "sec34-Diagonalization.html#sec34-Diagonalization-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "diagonalize "
+},
+{
+  "id": "def-SimilarMatrices",
+  "level": "2",
+  "url": "sec34-Diagonalization.html#def-SimilarMatrices",
+  "type": "Definition",
+  "number": "3.4.3",
+  "title": "Similar Matrices.",
+  "body": " Similar Matrices   Let and be matrices. Then is similar to if there exists an invertible matrix such that    "
+},
+{
+  "id": "sec34-Diagonalization-9",
+  "level": "2",
+  "url": "sec34-Diagonalization.html#sec34-Diagonalization-9",
+  "type": "Example",
+  "number": "3.4.4",
+  "title": "",
+  "body": " Recall in the previous example, and . These two matrices are similar because with the matrix .  Let's first verify it! We can first find the inverse of quickly: Then we have So and are indeed similar!  Now let's try to compute by finding first to find any pattern! Observe that If we want to compute , we can do the same thing and find that So we can find as We saw that can be computed easily, so we can compute easily as well by just multiplying three matrices together (as opposed to multiplying by itself 25 times).  "
+},
+{
+  "id": "sec34-Diagonalization-12",
+  "level": "2",
+  "url": "sec34-Diagonalization.html#sec34-Diagonalization-12",
+  "type": "Note",
+  "number": "3.4.5",
+  "title": "But Richard... Why on earth do eigenvalues and eigenvectors have to do with diagonalization?",
+  "body": " But Richard... Why on earth do eigenvalues and eigenvectors have to do with diagonalization?  Let's say we have a square matrix . Suppose we let where and are the corresponding eigenvalues and eigenvectors of the matrix . That is, for each . To guarantee that is invertible, the columns of (aka all the eigenvectors) must be linearly independent. That is why we want to just grab the basis vectors of the eigenspace to ensure the invertibility.  Imagine we want to multiply . Then we obtain So we just showed that . Since is invertible, then exists, and we can multiply on the right on both sides of the equation. We obtain So yes! and are similar!  "
+},
+{
+  "id": "sec34-Diagonalization-13",
+  "level": "2",
+  "url": "sec34-Diagonalization.html#sec34-Diagonalization-13",
+  "type": "Example",
+  "number": "3.4.6",
+  "title": "",
+  "body": " Let . Let's diagonalize this matrix!  We need to find the eigenvalues and its corresponding eigenvectors for the diagonalization. In the last section, we found that the characteristic equation is This implies that the eigenvalues are (with the multiplicity of ) and (with the multiplicity of ). Next, we will find the corresponding eigenvectors of these eigenvalues.  Let's consider the eigenvalue of . Then we want to solve the homogeneous equation . The augmented matrix is Observe that is the free variable, so the solution, in parametric form, is Hence, an eigenvector that spans the eigenspace is .  Next, let's consider the eigenvalue of . Then we want to solve the homogeneous equation . The augmented matrix is Observe that and are the free variables, so the solution, in parametric form, is Hence, the eigenvectors that spans the eigenspace are and .  Now let's put together the diagonal matrix and our special matrix for the diagonalization! Our eigenvalues are and their corresponding basis eigenvectors are Then our diagonal matrix and our special matrix is    This is a good place to call it good for diagonalization since we found and . We can next verify it by making sure is indeed .  We can find by reducing to . Hence, .  Now we can verify that   "
+},
+{
+  "id": "sec34-Diagonalization-15",
+  "level": "2",
+  "url": "sec34-Diagonalization.html#sec34-Diagonalization-15",
+  "type": "Example",
+  "number": "3.4.7",
+  "title": "",
+  "body": " Let's diagonalize this matrix .  We want to first find its eigenvalues. That is, we want to solve the characteristic equation . Now we solve the characteristic equation to obtain the eigenvalues of , , and .  Let's consider the eigenvalue of . Then we want to solve the homogeneous equation . The augmented matrix is Observe that is the free variable, so the solution, in parametric form, is To avoid fractions, we can choose . Hence, an eigenvector that spans the eigenspace is .  Next, let's consider the eigenvalue of of . Then we want to solve the homogeneous equation . The augmented matrix is Observe that is the free variable, so the solution, in parametric form, is Hence, an eigenvector that spans the eigenspace is .  Finally, let's consider the eigenvalue of . Then we want to solve the homogeneous equation . The augmented matrix is Observe that is the free variable, so the solution, in parametric form, is Hence, an eigenvector that spans the eigenspace is .  Now we put together the diagonal matrix and our special matrix . Our eigenvalues are and their corresponding basis eigenvectors are Then our diagonal matrix and our special matrix is    Feel free to verify our answer by computing and see if we get out of it.   "
+},
+{
+  "id": "sec34-Diagonalization-17",
+  "level": "2",
+  "url": "sec34-Diagonalization.html#sec34-Diagonalization-17",
+  "type": "Example",
+  "number": "3.4.8",
+  "title": "",
+  "body": " Let's say our matrix and we want to diagonalize it.  We will first find the eigenvalues of . The characteristic polynomial is We can factor the characteristic polynomial as follows: So we can solve the characteristic equation and obtain the eigenvalues of (with the multiplicity of ) and (with the multiplicity of ).   NOTE: Feel free to use technology to help you solve the characteristic equation. Remember that we should obtain the number of solutions matching up with the degree of the equation, including multiplicity, guaranteed by the Fundamental Theorem of Algebra.  Next, let's find the corresponding eigenvectors for these eigenvalues. We will start with . We want to solve the homogeneous equation . The augmented matrix is Observe that is the free variable, so the solution in parametric form is Hence, an eigenvector that spans this eigenspace is .  Now let's consider the eigenvalue . We want to solve the homogeneous equation . The augmented matrix is Observe that is the only free variable. The solution in parametric form is To avoid fractions, we can choose , which gives us the eigenvector that spans the eigenspace.  Wait a minute! We have a problem. For the matrix to be diagonalizable, we need linearly independent eigenvectors to form our invertible matrix . However, the eigenvalue has an algebraic multiplicity of , but its eigenspace is spanned just by one basis vector of ... We don't have enough basis vectors to construct our special matrix ...   Therefore, the matrix is not diagonalizable!   "
+},
+{
   "id": "secA1-Midterm1Review",
   "level": "1",
   "url": "secA1-Midterm1Review.html",
